@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mainStyle.css">
+    <link rel="icon" href="/cropped-favicon-cye-v3-1-1-32x32.webp">
+    <title>Sistema de facturación</title>
+</head>
+<body>
+    <div id="usuarioContent"> <!-- Login -->
+        <img src="Logo C&E.svg" alt="">
+  
+        <p class="textUser1" >Bienvenido</p>
+        <div>
+            <p class="textUser2" >Usuario</p>
+            <input class="inputUserT" type="text">
+        </div>
+        <div>
+            <p class="textUser3" >Contraseña</p>
+            <input class="inputUserP" type="password">
+            <a class="forgetPassword" href="">¿Olvidastes tu contraseña?</a>
+        </div>
+        <div>
+            <input id="buttonAcept" value="Ingresar" type="button">
+        </div>
+    </div> <!-- Login -->
+
+    <div id="all"> <!-- Contenedor: Encabezado, centro y pie de pagina -->
+ 
+        <header> <!-- Encabezado -->
+            <div class="nameContent">
+                <img src="Logo C&E.svg" alt="">
+                <h1>Sistema de facturación</h1>
+                <p id="change">Cambiar de usuario</p>
+            </div>
+            <div class="listContent">
+                <div id="billButton">Facturar</div>
+                <div class="listBill">Inventario</div>
+                <div class="listBill">Anular</div>
+                <a class="listBill" href="https://cajasyempaquesdecolombia.com/" target="_blank" rel="noopener noreferrer">Pagina web</a>
+            </div>
+        </header> <!-- Encabezado -->
+
+        <main> <!-- Centro -->
+
+            <div id="billing"> <!-- Facturacion -->
+
+                <div id="firstBill"> <!-- Primera pantalla -->
+                    <div class="detailsContent" >
+                        <div class="subDetailsContent" >
+                            <div class="textDetails" >
+                                <p>Nombre</p>
+                                <input id="nameDetailsWrite" type="text">
+                            </div>
+                            <div class="textDetails" >
+                                <p>Documento</p>
+                                <input id="nameDetailsWrite2" type="text">
+                            </div>
+                        </div>
+                        <div class="subDetailsContent"  >
+                            <div class="textDetails" >
+                                <p>Telefono</p>
+                                <input id="nameDetailsWrite3" type="text">
+                            </div>
+                            <div class="textDetails" >
+                                <p>Correo</p>
+                                <input id="nameDetailsWrite4" type="email">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="detailsContent"  >
+                        <input  id="detailsButton" type="button" value="Aceptar">
+                    </div>  
+
+                </div> <!-- Primera pantalla -->
+
+                <div id="secondBill"> <!-- Segunda pantalla -->
+
+                    <div class="contentBill" > 
+                        <div class="billingDetails1" >
+                            <p class="textBill1" >Factura #</p>
+                            <p class="numberBill" >1</p>
+                        </div>
+                        <div class="billingDetails2" >
+                            <div class="subDetails1">
+                                <p>Nombre:</p>
+                                <p id="nameBill"></p>
+                            </div>
+                            <div class="subDetails1">
+                                <p>Documento:</p>
+                                <p id="documentBill" ></p>
+                            </div>
+
+                            <div class="subDetails1">
+                                <p>Telefono:</p>
+                                <p id="phoneBill" ></p>
+                            </div>
+                            <div class="subDetails1">
+                                <p>Correo:</p>
+                                <p id="adressBill" ></p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="coating">
+                        <div class="coatingInto">
+                            <div class="firstCells">
+                                <div>ID del producto</div>
+                                <div>Nombre del producto</div>
+                                <div>Unidades</div>
+                                <div>Precio por unidad</div>
+                                <div>Valor total</div>
+                            </div>
+                            <div class="firstCells">
+                                <input class="cells" type="text">
+                                <input class="cells" type="text">
+                                <input class="cells" type="text">
+                                <input class="cells" type="text">
+                                <input class="cells" type="text">
+                            </div>
+                            <div class="secondCells">
+                                <input class="cells" type="text">
+                                <input class="cells" type="text">
+                                <input class="cells" type="text">
+                                <input class="cells" type="text">
+                                <input class="cells" type="text">
+                            </div>
+                            <div class="firstCells">
+                                <input class="cells" type="text">
+                                <input class="cells" type="text">
+                                <input class="cells" type="text">
+                                <input class="cells" type="text">
+                                <input class="cells" type="text">
+                            </div>
+                            <div class="secondCells">
+                                <input class="cells" type="text">
+                                <input class="cells" type="text">
+                                <input class="cells" type="text">
+                                <input class="cells" type="text">
+                                <input class="cells" type="text">
+                            </div>
+                        </div>
+                        <div class="billingDetails3" >
+                            <input value="Facturar" type="button">
+                            <div>
+                                <p>Total: $</p>
+                                <p>0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Facturacion -->
+            
+            <div id="inventory"> <!-- Inventario -->
+
+                
+
+            </div><!-- Inventario -->
+
+        </main> <!-- Centro -->
+    </div>
+    <script src="mainLogic.js"></script>
+</body>
+</html>
