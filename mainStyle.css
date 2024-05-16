@@ -170,29 +170,38 @@ body{
             }
 
             .detailsContent{
-                display: flex;
-                justify-content:space-around
+                height: 100%;
+                width: 100%;
+            }
+            .detailsContent p {
+                color: white;
+                margin: 0;
+                margin-right: 10px;
             }
 
-            .subDetailsContent div p{
-                margin-bottom: 0;
-                color: white
-            } 
+            .subDetailsContent{
+                display: flex;
+                justify-content: space-around;
+            }
 
-            .detailsContent:last-child input{
-                margin-top: 15px;
-                height: 25px;
-                width: 100px;
+            .textDetails{
+                display: flex;
+                padding: 5px;
+            }
+
+            .textDetails input{
+                border: 0;
+                outline: none;
+                
             }
 
             #nameDetailsWrite{
-                width: 250px;
+                width: 100px;
             }
 
-            #nameDetailsWrite3{
-                width: 120px;
+            #nameDetailsWrite2{
+                width: 80px;
             }
-
 
 
         /*PRIMERA PANTALLA*/

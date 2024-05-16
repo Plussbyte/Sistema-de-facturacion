@@ -36,9 +36,9 @@
                 //DESBLOKEAR FACTURACION
 
                 //MOSTRAR DATOS USUARIO
-                    document.getElementById('nameBill').innerText = document.getElementById('nameDetailsWrite').value
-                    document.getElementById('documentBill').innerText = document.getElementById('nameDetailsWrite2').value
-                    document.getElementById('phoneBill').innerText = document.getElementById('nameDetailsWrite3').value
+                    document.getElementById('documentBill').innerText = document.getElementById('nameDetailsWrite').value
+                    document.getElementById('phoneBill').innerText = document.getElementById('nameDetailsWrite2').value
+                    document.getElementById('nameBill').innerText = document.getElementById('nameDetailsWrite3').value
                     document.getElementById('adressBill').innerText = document.getElementById('nameDetailsWrite4').value
                 //MOSTRAR DATOS USUARIO
             })
