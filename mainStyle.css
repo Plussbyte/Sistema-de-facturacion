@@ -161,8 +161,8 @@ body{
                 background-color:#e42820;
                 border: 5px #9c1c18 solid;
                 border-radius: 10px;
-                height: 395px;
-                width: 435px;
+                height: 295px;
+                width: 455px;
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%,-50%);
@@ -173,36 +173,27 @@ body{
                 height: 100%;
                 width: 100%;
             }
-            .detailsContent p {
-                color: white;
-                margin: 0;
-                margin-right: 10px;
-            }
-
-            .subDetailsContent{
-                display: flex;
-                justify-content: space-around;
-            }
 
             .textDetails{
-                display: flex;
-                padding: 5px;
+                display: grid;
+                margin: 10px 20px 0 10px;
+                grid-template-columns: 120px 1fr 140px;
+                height: 20px;
+                overflow: hidden;
             }
 
-            .textDetails input{
-                border: 0;
-                outline: none;
-                
+            .textDetails2{
+                display: grid;
+                grid-template-columns: 120px 1fr 140px;
+                margin: 0 20px 0 10px;
+                grid-template-rows: 20px;
+                overflow: hidden;
             }
 
-            #nameDetailsWrite{
-                width: 100px;
-            }
 
-            #nameDetailsWrite2{
-                width: 80px;
+            .textDetails p, .textDetails2 p,.textDetails3 p{
+                margin: 0;
             }
-
 
         /*PRIMERA PANTALLA*/
 
