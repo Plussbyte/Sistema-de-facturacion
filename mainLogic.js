@@ -19,6 +19,11 @@
         document.getElementById('firstBill').style.display = 'initial'
             document.getElementById('secondBill').style.opacity = '.5'
             document.getElementById('secondBill').style.pointerEvents = 'none'
+            document.getElementById('warningFirstBill').innerText = ''
+            nameDetailsWrite.value = 'Documento', nameDetailsWrite.style.color = 'grey'
+            nameDetailsWrite2.value = 'Teléfono', nameDetailsWrite2.style.color = 'grey'
+            nameDetailsWrite3.value = 'Nombre', nameDetailsWrite3.style.color = 'grey'
+            nameDetailsWrite4.value = 'Correo', nameDetailsWrite4.style.color = 'grey'
     })
 
 // HEADER
@@ -28,72 +33,80 @@
     //FACTURACION
 
         //PRIMERA PANTALLA
-            document.getElementById('detailsButton').addEventListener('click',() =>{
-                //DESBLOKEAR FACTURACION
-                    document.getElementById('firstBill').style.display = 'none'
-                    document.getElementById('secondBill').style.opacity = '1'
-                    document.getElementById('secondBill').style.pointerEvents = 'auto'
-                //DESBLOKEAR FACTURACION
+            let nameDetailsWrite = document.getElementById('nameDetailsWrite') ,nameDetailsWrite2 = document.getElementById('nameDetailsWrite2') , nameDetailsWrite3 = document.getElementById('nameDetailsWrite3') ,nameDetailsWrite4 = document.getElementById('nameDetailsWrite4')
 
-                //MOSTRAR DATOS USUARIO
-                    document.getElementById('documentBill').innerText = document.getElementById('nameDetailsWrite').value
-                    document.getElementById('phoneBill').innerText = document.getElementById('nameDetailsWrite2').value
-                    document.getElementById('nameBill').innerText = document.getElementById('nameDetailsWrite3').value
-                    document.getElementById('adressBill').innerText = document.getElementById('nameDetailsWrite4').value
-                //MOSTRAR DATOS USUARIO
+            document.getElementById('detailsButton').addEventListener('click',() =>{
+                
+                if(nameDetailsWrite.value !== 'Documento' && nameDetailsWrite2.value !== 'Teléfono' && nameDetailsWrite3.value !== 'Nombre' && nameDetailsWrite4.ariaValueMin !== 'Correo'){// ----> Verifica si se escribio o no 
+                    //DESBLOKEAR FACTURACION
+                        document.getElementById('firstBill').style.display = 'none'
+                        document.getElementById('secondBill').style.opacity = '1'
+                        document.getElementById('secondBill').style.pointerEvents = 'auto'
+                    //DESBLOKEAR FACTURACION
+
+                    //MOSTRAR DATOS USUARIO
+                        document.getElementById('documentBill').innerText = nameDetailsWrite.value
+                        document.getElementById('phoneBill').innerText = nameDetailsWrite2.value
+                        document.getElementById('nameBill').innerText = nameDetailsWrite3.value
+                        document.getElementById('adressBill').innerText = nameDetailsWrite4.value
+                    //MOSTRAR DATOS USUARIO 
+                    document.getElementById('warningFirstBill').innerText = ''
+                } else{ document.getElementById('warningFirstBill').innerText = 'Verifique que los campos esten correctos'
+
+                }
             })
 
             //TEXTO DE INPUTS
 
                     //Elimina el texto predeterminado si el usuario hace click
-                    document.getElementById('nameDetailsWrite').addEventListener('focus',() =>{
-                        if(document.getElementById('nameDetailsWrite').value === 'Documento'){
-                            document.getElementById('nameDetailsWrite').value = ''
-                            document.getElementById('nameDetailsWrite').style.color = 'black'
+                    nameDetailsWrite.addEventListener('focus',() =>{
+                        if(nameDetailsWrite.value === 'Documento'){
+                            nameDetailsWrite.value = ''
+                            nameDetailsWrite.style.color = 'black'
                         }
                     })
-                    document.getElementById('nameDetailsWrite2').addEventListener('focus',() =>{
-                        if(document.getElementById('nameDetailsWrite2').value === 'Teléfono'){
-                            document.getElementById('nameDetailsWrite2').value = ''
-                            document.getElementById('nameDetailsWrite2').style.color = 'black'
+                    nameDetailsWrite2.addEventListener('focus',() =>{
+                        if(nameDetailsWrite2.value === 'Teléfono'){
+                            nameDetailsWrite2.value = ''
+                            nameDetailsWrite2.style.color = 'black'
                         }
                     })
-                    document.getElementById('nameDetailsWrite3').addEventListener('focus',() =>{
-                        if(document.getElementById('nameDetailsWrite3').value === 'Nombre'){
-                            document.getElementById('nameDetailsWrite3').value = ''
-                            document.getElementById('nameDetailsWrite3').style.color = 'black'
+                    nameDetailsWrite3.addEventListener('focus',() =>{
+                        if(nameDetailsWrite3.value === 'Nombre'){
+                            nameDetailsWrite3.value = ''
+                            nameDetailsWrite3.style.color = 'black'
                         }
                     })
-                    document.getElementById('nameDetailsWrite4').addEventListener('focus',() =>{
-                        if(document.getElementById('nameDetailsWrite4').value === 'Correo'){
-                            document.getElementById('nameDetailsWrite4').value = ''
-                            document.getElementById('nameDetailsWrite4').style.color = 'black'
+                    nameDetailsWrite4.addEventListener('focus',() =>{
+                        if(nameDetailsWrite4.value === 'Correo'){
+                            nameDetailsWrite4.value = ''
+                            nameDetailsWrite4.style.color = 'black'
                         }
                     })
 
                     //Vuelve al texto predeterminado si el usuario sale del input
-                    document.getElementById('nameDetailsWrite').addEventListener('blur',()=>{
-                        if(document.getElementById('nameDetailsWrite').value === ''){
-                            document.getElementById('nameDetailsWrite').value = 'Documento'
-                            document.getElementById('nameDetailsWrite').style.color = 'gray'
+                    nameDetailsWrite.addEventListener('blur',()=>{
+                        if(nameDetailsWrite.value === ''){
+                            nameDetailsWrite.value = 'Documento'
+                            nameDetailsWrite.style.color = 'gray'
                         }                       
                     })
-                    document.getElementById('nameDetailsWrite2').addEventListener('blur',()=>{
-                        if(document.getElementById('nameDetailsWrite2').value === ''){
-                            document.getElementById('nameDetailsWrite2').value = 'Teléfono'
-                            document.getElementById('nameDetailsWrite2').style.color = 'gray'
+                    nameDetailsWrite2.addEventListener('blur',()=>{
+                        if(nameDetailsWrite2.value === ''){
+                            nameDetailsWrite2.value = 'Teléfono'
+                            nameDetailsWrite2.style.color = 'gray'
                         }                       
                     })
-                    document.getElementById('nameDetailsWrite3').addEventListener('blur',()=>{
-                        if(document.getElementById('nameDetailsWrite3').value === ''){
-                            document.getElementById('nameDetailsWrite3').value = 'Nombre'
-                            document.getElementById('nameDetailsWrite3').style.color = 'gray'
+                    nameDetailsWrite3.addEventListener('blur',()=>{
+                        if(nameDetailsWrite3.value === ''){
+                            nameDetailsWrite3.value = 'Nombre'
+                            nameDetailsWrite3.style.color = 'gray'
                         }                       
                     })
-                    document.getElementById('nameDetailsWrite4').addEventListener('blur',()=>{
-                        if(document.getElementById('nameDetailsWrite4').value === ''){
-                            document.getElementById('nameDetailsWrite4').value = 'Correo'
-                            document.getElementById('nameDetailsWrite4').style.color = 'gray'
+                    nameDetailsWrite4.addEventListener('blur',()=>{
+                        if(nameDetailsWrite4.value === ''){
+                            nameDetailsWrite4.value = 'Correo'
+                            nameDetailsWrite4.style.color = 'gray'
                         }                       
                     })
             //TEXTO DE INPUTS
