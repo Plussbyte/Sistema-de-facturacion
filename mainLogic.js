@@ -43,6 +43,61 @@
                 //MOSTRAR DATOS USUARIO
             })
 
+            //TEXTO DE INPUTS
+
+                    //Elimina el texto predeterminado si el usuario hace click
+                    document.getElementById('nameDetailsWrite').addEventListener('focus',() =>{
+                        if(document.getElementById('nameDetailsWrite').value === 'Documento'){
+                            document.getElementById('nameDetailsWrite').value = ''
+                            document.getElementById('nameDetailsWrite').style.color = 'black'
+                        }
+                    })
+                    document.getElementById('nameDetailsWrite2').addEventListener('focus',() =>{
+                        if(document.getElementById('nameDetailsWrite2').value === 'Teléfono'){
+                            document.getElementById('nameDetailsWrite2').value = ''
+                            document.getElementById('nameDetailsWrite2').style.color = 'black'
+                        }
+                    })
+                    document.getElementById('nameDetailsWrite3').addEventListener('focus',() =>{
+                        if(document.getElementById('nameDetailsWrite3').value === 'Nombre'){
+                            document.getElementById('nameDetailsWrite3').value = ''
+                            document.getElementById('nameDetailsWrite3').style.color = 'black'
+                        }
+                    })
+                    document.getElementById('nameDetailsWrite4').addEventListener('focus',() =>{
+                        if(document.getElementById('nameDetailsWrite4').value === 'Correo'){
+                            document.getElementById('nameDetailsWrite4').value = ''
+                            document.getElementById('nameDetailsWrite4').style.color = 'black'
+                        }
+                    })
+
+                    //Vuelve al texto predeterminado si el usuario sale del input
+                    document.getElementById('nameDetailsWrite').addEventListener('blur',()=>{
+                        if(document.getElementById('nameDetailsWrite').value === ''){
+                            document.getElementById('nameDetailsWrite').value = 'Documento'
+                            document.getElementById('nameDetailsWrite').style.color = 'gray'
+                        }                       
+                    })
+                    document.getElementById('nameDetailsWrite2').addEventListener('blur',()=>{
+                        if(document.getElementById('nameDetailsWrite2').value === ''){
+                            document.getElementById('nameDetailsWrite2').value = 'Teléfono'
+                            document.getElementById('nameDetailsWrite2').style.color = 'gray'
+                        }                       
+                    })
+                    document.getElementById('nameDetailsWrite3').addEventListener('blur',()=>{
+                        if(document.getElementById('nameDetailsWrite3').value === ''){
+                            document.getElementById('nameDetailsWrite3').value = 'Nombre'
+                            document.getElementById('nameDetailsWrite3').style.color = 'gray'
+                        }                       
+                    })
+                    document.getElementById('nameDetailsWrite4').addEventListener('blur',()=>{
+                        if(document.getElementById('nameDetailsWrite4').value === ''){
+                            document.getElementById('nameDetailsWrite4').value = 'Correo'
+                            document.getElementById('nameDetailsWrite4').style.color = 'gray'
+                        }                       
+                    })
+            //TEXTO DE INPUTS
+
 
         //PRIMERA PANTALLA
 

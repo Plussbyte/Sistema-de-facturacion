@@ -193,6 +193,23 @@ body{
 
             .textDetails p, .textDetails2 p,.textDetails3 p{
                 margin: 0;
+                color: white;
+            }
+
+            .textDetails input, .textDetails2 input,.textDetails3 input{
+                color: gray;
+            }
+
+            .firstBillContentButton{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 20px;
+            }
+
+            #detailsButton{
+                height: 25px;
+                width: 100px;
             }
 
         /*PRIMERA PANTALLA*/
