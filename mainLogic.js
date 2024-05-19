@@ -32,12 +32,30 @@
 
     //FACTURACION
 
-        //PRIMERA PANTALLA
-            let nameDetailsWrite = document.getElementById('nameDetailsWrite') ,nameDetailsWrite2 = document.getElementById('nameDetailsWrite2') , nameDetailsWrite3 = document.getElementById('nameDetailsWrite3') ,nameDetailsWrite4 = document.getElementById('nameDetailsWrite4')
-
-            document.getElementById('detailsButton').addEventListener('click',() =>{
-                
-                if(nameDetailsWrite.value !== 'Documento' && nameDetailsWrite2.value !== 'Teléfono' && nameDetailsWrite3.value !== 'Nombre' && nameDetailsWrite4.ariaValueMin !== 'Correo'){// ----> Verifica si se escribio o no 
+        //PRIMERA PANTALLA      
+                document.getElementById('detailsButton').addEventListener('click',() =>{
+                //RESTRINGIR INPUTS
+                    let nameDetailsWrite = document.getElementById('nameDetailsWrite') ,nameDetailsWrite2 = document.getElementById('nameDetailsWrite2') , nameDetailsWrite3 = document.getElementById('nameDetailsWrite3') ,nameDetailsWrite4 = document.getElementById('nameDetailsWrite4')
+                    let textNameDetailsWrite = nameDetailsWrite.value
+                    let arrayTextNameDetailsWrite = textNameDetailsWrite.split("")
+                    let iterador = 0
+                    for(let i = 0;i<arrayTextNameDetailsWrite.length;i++){
+                        for(let a = 0;a<9;a++){
+                            if(arrayTextNameDetailsWrite[i] == a){
+                                 iterador++
+                            }
+                        }
+                    }
+                    if(arrayTextNameDetailsWrite.length === iterador){
+                        lock = 0
+                    } else if(nameDetailsWrite.value === 'Documento'){
+                        lock = 1
+                    } else {
+                        lock = 2
+                    }
+                    console.log(lock)    
+                //RESTRINGIR INPUTS
+                if(nameDetailsWrite.value !== 'Documento' && nameDetailsWrite2.value !== 'Teléfono' && nameDetailsWrite3.value !== 'Nombre' && nameDetailsWrite4.ariaValueMin !== 'Correo' && lock === 0){// ----> Verifica todos los inputs
                     //DESBLOKEAR FACTURACION
                         document.getElementById('firstBill').style.display = 'none'
                         document.getElementById('secondBill').style.opacity = '1'
@@ -50,7 +68,11 @@
                         document.getElementById('nameBill').innerText = nameDetailsWrite3.value
                         document.getElementById('adressBill').innerText = nameDetailsWrite4.value
                     //MOSTRAR DATOS USUARIO 
+
                     document.getElementById('warningFirstBill').innerText = ''
+
+                }else if(lock === 2){
+                    document.getElementById('warningFirstBill').innerText = 'Verifique que el documento solo contenga numeros'
                 } else{ document.getElementById('warningFirstBill').innerText = 'Verifique que los campos esten correctos'
 
                 }
