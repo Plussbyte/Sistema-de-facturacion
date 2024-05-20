@@ -36,17 +36,30 @@
                 document.getElementById('detailsButton').addEventListener('click',() =>{
                 //RESTRINGIR INPUTS
                     let nameDetailsWrite = document.getElementById('nameDetailsWrite') ,nameDetailsWrite2 = document.getElementById('nameDetailsWrite2') , nameDetailsWrite3 = document.getElementById('nameDetailsWrite3') ,nameDetailsWrite4 = document.getElementById('nameDetailsWrite4')
-                    let textNameDetailsWrite = nameDetailsWrite.value
-                    let arrayTextNameDetailsWrite = textNameDetailsWrite.split("")
-                    let iterador = 0
-                    for(let i = 0;i<arrayTextNameDetailsWrite.length;i++){
-                        for(let a = 0;a<=9;a++){
-                            if(arrayTextNameDetailsWrite[i] == a){
-                                 iterador++
+                    let arrayTextNameDetailsWrite = nameDetailsWrite.value.split("").concat(nameDetailsWrite2.value.split(""))
+                    let arrayTextNameDetailsWrite2 = nameDetailsWrite3.value.split("").concat(nameDetailsWrite4.value.split(""))
+                    console.log(arrayTextNameDetailsWrite)
+                    let iterador = 0 , iterador2 = 0
+
+                        // Bucle que determina si hay numeros o letras en el arreglo
+                        for(let i = 0;i<arrayTextNameDetailsWrite.length;i++){  // En este caso permite numeros 
+                            for(let a = 0;a<=9;a++){
+                                if(arrayTextNameDetailsWrite[i] == a){
+                                    iterador++
+                                }
                             }
                         }
-                    }
-                    if(arrayTextNameDetailsWrite.length === iterador){
+                                       
+                        for(let i = 0;i<arrayTextNameDetailsWrite2.length;i++){ // En este caso permite letras
+                            for(let a = 0;a<=9;a++){
+                                if(arrayTextNameDetailsWrite2[i] == a){
+                                    iterador2++
+                                }
+                            }
+                        }
+                        // Bucle que determina si hay numeros o letras en el arreglo
+
+                    if(arrayTextNameDetailsWrite.length === iterador && arrayTextNameDetailsWrite2.length !== iterador2){
                         lock = 0
                     } else if(nameDetailsWrite.value === 'Documento'){
                         lock = 1
@@ -72,7 +85,7 @@
                     document.getElementById('warningFirstBill').innerText = ''
 
                 }else if(lock === 2){
-                    document.getElementById('warningFirstBill').innerText = 'Verifique que el documento solo contenga numeros'
+                    document.getElementById('warningFirstBill').innerText = 'Verifique que el documento  y el teléfono solo contengan numeros'
                 } else{ document.getElementById('warningFirstBill').innerText = 'Verifique que los campos esten correctos'
 
                 }
