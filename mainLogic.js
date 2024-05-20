@@ -40,7 +40,7 @@
                     let arrayTextNameDetailsWrite = textNameDetailsWrite.split("")
                     let iterador = 0
                     for(let i = 0;i<arrayTextNameDetailsWrite.length;i++){
-                        for(let a = 0;a<9;a++){
+                        for(let a = 0;a<=9;a++){
                             if(arrayTextNameDetailsWrite[i] == a){
                                  iterador++
                             }
@@ -53,7 +53,7 @@
                     } else {
                         lock = 2
                     }
-                    console.log(lock)    
+   
                 //RESTRINGIR INPUTS
                 if(nameDetailsWrite.value !== 'Documento' && nameDetailsWrite2.value !== 'Teléfono' && nameDetailsWrite3.value !== 'Nombre' && nameDetailsWrite4.ariaValueMin !== 'Correo' && lock === 0){// ----> Verifica todos los inputs
                     //DESBLOKEAR FACTURACION
