@@ -157,6 +157,7 @@ body{
         /*PRIMERA PANTALLA*/
 
             #firstBill{
+                display: none;
                 position: absolute;
                 background-color:#e42820;
                 border: 5px #9c1c18 solid;
@@ -293,6 +294,8 @@ body{
                 height: 25px;
                 background-color: gray;
                 color: white;
+                overflow: hidden;
+                white-space: nowrap;
                 margin-bottom: 0;
             }
 

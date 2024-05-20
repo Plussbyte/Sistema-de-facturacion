@@ -37,7 +37,7 @@
                 //RESTRINGIR INPUTS
                     let nameDetailsWrite = document.getElementById('nameDetailsWrite') ,nameDetailsWrite2 = document.getElementById('nameDetailsWrite2') , nameDetailsWrite3 = document.getElementById('nameDetailsWrite3') ,nameDetailsWrite4 = document.getElementById('nameDetailsWrite4')
                     let arrayTextNameDetailsWrite = nameDetailsWrite.value.split("").concat(nameDetailsWrite2.value.split(""))
-                    let arrayTextNameDetailsWrite2 = nameDetailsWrite3.value.split("").concat(nameDetailsWrite4.value.split(""))
+                    let arrayTextNameDetailsWrite2 = nameDetailsWrite3.value.split("")
                     console.log(arrayTextNameDetailsWrite)
                     let iterador = 0 , iterador2 = 0
 
@@ -59,13 +59,15 @@
                         }
                         // Bucle que determina si hay numeros o letras en el arreglo
 
-                    if(arrayTextNameDetailsWrite.length === iterador && arrayTextNameDetailsWrite2.length !== iterador2){
+                    if(arrayTextNameDetailsWrite.length === iterador && iterador2 === 0){
                         lock = 0
-                    } else if(nameDetailsWrite.value === 'Documento'){
+                    } else if(arrayTextNameDetailsWrite.length !== iterador){
                         lock = 1
-                    } else {
+                    } else if(iterador2 > 0){
                         lock = 2
-                    }
+                    } else {
+                }
+                  
    
                 //RESTRINGIR INPUTS
                 if(nameDetailsWrite.value !== 'Documento' && nameDetailsWrite2.value !== 'Teléfono' && nameDetailsWrite3.value !== 'Nombre' && nameDetailsWrite4.ariaValueMin !== 'Correo' && lock === 0){// ----> Verifica todos los inputs
@@ -83,12 +85,21 @@
                     //MOSTRAR DATOS USUARIO 
 
                     document.getElementById('warningFirstBill').innerText = ''
-
+                }else if(lock === 1){
+                    document.getElementById('warningFirstBill').innerText = 'Verifique que el documento y el teléfono contengan numeros'
                 }else if(lock === 2){
-                    document.getElementById('warningFirstBill').innerText = 'Verifique que el documento  y el teléfono solo contengan numeros'
-                } else{ document.getElementById('warningFirstBill').innerText = 'Verifique que los campos esten correctos'
+                    document.getElementById('warningFirstBill').innerText = 'Verifique que el nombre no contenga numeros'
+                }else if(lock === 3){
+                    document.getElementById('warningFirstBill').innerText = 'Error'
+                } else{ document.getElementById('warningFirstBill').innerText = 'Verifique que los campos esten completos'
 
                 }
+
+                // Pruebas --------------
+                    document.getElementById('firstBill').style.display = 'none'
+                    document.getElementById('secondBill').style.opacity = '1'
+                    document.getElementById('secondBill').style.pointerEvents = 'auto'
+                // Pruebas --------------
             })
 
             //TEXTO DE INPUTS
