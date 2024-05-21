@@ -374,3 +374,24 @@ body{
     /*INVENTARIO*/
 
 /* MAIN */
+
+/* FOOTER */
+        footer{
+            position: absolute;
+            width: 100vw;
+            bottom: 0;
+        }
+
+        .contentFooter{
+            background-color:#e42820;
+            display: flex;
+            height: auto;
+            width: auto;
+        }
+
+        .contentFooter p{
+            color: white;
+            margin: 5px 0 5px 10px;
+        }
+
+/* FOOTER */
