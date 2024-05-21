@@ -206,7 +206,6 @@ body{
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                margin-top: 20px;
                 color: white;
             }
 
@@ -215,13 +214,18 @@ body{
                 width: 100px;
             }
 
+            #warningFirstBill{
+                display: none;
+            }
+
         /*PRIMERA PANTALLA*/
 
         /*SEGUNDA PANTALLA*/
 
             #secondBill{
                 display: flex;
-                margin: 1%;
+                margin: 1% 1% 1% 1%;
+                width: 80%;
                 opacity: .5;
                 pointer-events:none;
                 justify-content: center;
@@ -233,6 +237,7 @@ body{
 
             .contentBill{
                 height: auto;
+                position: relative;
                 width: 98%;
             }
 
@@ -280,11 +285,13 @@ body{
             .coatingInto{
                 margin-top: 10px;
                 width: 98%;
+                border-radius: 10px 10px 0 0px;
+                overflow: hidden;
             }
 
             .coatingInto div{
                 display: grid;
-                grid-template-columns: 10% 43% 7% 20% 20%;
+                grid-template-columns: minmax(8em,10em) minmax(9em,1fr) minmax(4em,5em) minmax(7.4em,10em) minmax(5em,7em)
             }
 
             .coatingInto div:first-child div{
@@ -294,7 +301,6 @@ body{
                 height: 25px;
                 background-color: gray;
                 color: white;
-                overflow: hidden;
                 white-space: nowrap;
                 margin-bottom: 0;
             }
@@ -377,7 +383,7 @@ body{
 
 /* FOOTER */
         footer{
-            position: absolute;
+            position: fixed;
             width: 100vw;
             bottom: 0;
         }
