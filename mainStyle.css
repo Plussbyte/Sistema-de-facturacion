@@ -223,6 +223,23 @@ body{
                 .contentCopyBill{
                     display: flex;
                     justify-content: flex-end;
+                    &::after{
+                        content: "Imprimir factura";
+                        background-color: white;
+                        padding: 2px;
+                        border: 1px black solid;
+                        border-radius: 2px;
+                        top: 30px;
+                        right: -50px;
+                        position: absolute;
+                        pointer-events: none;
+                        display: none;
+                        
+                    }
+
+                    &:hover::after{
+                        display: initial;
+                    }
                 }
 
                 .contentCopyBill input{
