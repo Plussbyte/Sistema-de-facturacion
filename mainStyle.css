@@ -218,6 +218,26 @@ body{
                 display: none;
             }
 
+            /*Boton copiar factura*/
+
+                .contentCopyBill{
+                    display: flex;
+                    justify-content: flex-end;
+                }
+
+                .contentCopyBill input{
+                    height: 30px;
+                    width: 30px;
+                    margin: 5px 10px 0 0;
+                    background-image: url(/Imprimir.png);
+                    background-size: 35px 22px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    cursor: pointer;
+                }
+
+            /*Boton copiar factura*/
+
         /*PRIMERA PANTALLA*/
 
         /*SEGUNDA PANTALLA*/
