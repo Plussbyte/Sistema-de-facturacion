@@ -155,7 +155,7 @@ body{
         }
 
         /*PRIMERA PANTALLA*/
-            /*PANTALLA DATOS CLIENTE*/
+            
                 #firstBill{
                     display: none;
                     position: absolute;
@@ -168,15 +168,17 @@ body{
                     top: 50%;
                     transform: translate(-50%,-50%);
                     z-index: 1;
-                    
+                    overflow: hidden;
                 }
+
+            /*PANTALLA DATOS CLIENTE*/
 
                 #detailsContent{
                     height: 100%;
                     width: 100%;
                     right: 0;
                     position: relative;
-                    transition: right 0.6s ease-out;
+                    transition: right 0.5s ease-out;
                 }
 
                 .textDetails{
@@ -235,7 +237,7 @@ body{
                             border: 1px black solid;
                             border-radius: 2px;
                             top: 30px;
-                            right: -50px;
+                            right: 0px;
                             position: absolute;
                             pointer-events: none;
                             display: none;
@@ -258,7 +260,51 @@ body{
                     }
                 /*Boton copiar factura*/
             /*PANTALLA DATOS CLIENTE*/
+            
+            /*IMPRIMIR FACTURA PANTALLA*/
+                #printBill{
+                    display: flex;
+                    position: absolute;
+                    top:0;
+                    left: 460px;
+                    transition: left 0.5s ease-out;
+                }
+                /*BOTON VOLVER*/
+                    #buttonReturn{
+                        height: 25px;
+                        width: 28px;
+                        margin: 3px 0 0 3px;
+                        background-image: url(flechaIzquierda);
+                        background-size: 21px 21px;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        border-radius: 5px 0 0 0;
+                    }
+                /*BOTON VOLVER*/
 
+                #printBill{
+                    display: none;
+                }
+
+                .contentPrintBill{
+                    display: flex;
+                    align-items: center;
+                }
+
+                #printBill p{
+                    color: white;
+                    margin: 0;
+                    margin: 0 10px 0 20px;
+                    white-space: nowrap;
+                }
+                #textCopy{
+                    height: 20px;
+                    width: 100px;
+                    border: none;
+                }
+
+
+            /*IMPRIMIR FACTURA PANTALLA*/
 
         /*PRIMERA PANTALLA*/
 
@@ -285,7 +331,14 @@ body{
 
             .billingDetails1{
                 display: flex;
+                justify-content: space-between;
+                align-items: center;
             }
+
+            .billingDetails1 div{
+                display: flex;
+            }
+
 
             .textBill1{
                 color: white;
@@ -297,6 +350,26 @@ body{
                 color: white;
                 font-size: 30px;
                 margin: 5px 0 0 0;
+            }
+
+            #saveBill{
+                height: 30px;
+                width: 30px;
+                background-image: url(Guardar.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 20px 20px;
+                margin:  5px 0 0 0;
+            }
+
+            #quoteBill{
+                height: 30px;
+                width: 30px;
+                background-image: url(Cotizar.png);
+                background-position: 4px;
+                background-repeat: no-repeat;
+                background-size: 20px 20px;
+                margin: 5px 20px 0 20px;
             }
 
             .billingDetails2{

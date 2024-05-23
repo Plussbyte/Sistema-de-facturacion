@@ -159,13 +159,33 @@
                 //TEXTO DE INPUTS
             //PANTALLA DATOS CLIENTE
             
-            //PANTALLA IMPRIMIR FACTURAS
+            // IMPRIMIR FACTURAS PANTALLA
+
                 let clientScreen = document.getElementById('detailsContent')
+                let printBill = document.getElementById('printBill')
                 document.getElementById('copyBillButton').addEventListener('click',()=>{
-                    clientScreen.style.right = '450px'
+                    printBill.style.display = 'initial'
+                    setTimeout(()=>{
+                        clientScreen.style.right = '450px'
+                        printBill.style.left = '0'
+                    }, 100)
+                    setTimeout(()=>{
+                        clientScreen.style.display = 'none'
+                    }, 600)                    
                 })
 
-            //PANTALLA IMPRIMIR FACTURAS
+                document.getElementById('buttonReturn').addEventListener('click', ()=>{
+                    clientScreen.style.display = 'initial'
+                    setTimeout(() => {
+                        clientScreen.style.right = '0'
+                        printBill.style.left = '460px'
+                    }, 100);
+                    setTimeout(()=>{
+                        printBill.style.display = 'none'
+                    }, 600)
+                })
+
+            // IMPRIMIR FACTURAS PANTALLA 
 
         //PRIMERA PANTALLA
 

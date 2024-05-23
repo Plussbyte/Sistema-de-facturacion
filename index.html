@@ -8,7 +8,7 @@
     <title>Sistema de facturación</title>
 </head>
 <body>
-    <!-- HOLA GITHUB 0.011-->
+    <!-- HOLA GITHUB 0.012-->
     <div id="usuarioContent"> <!-- Login -->
         <img src="Logo C&E.svg" alt="">
   
@@ -79,7 +79,11 @@
                     </div>
 
                     <div id="printBill" > <!-- Pantalla imprimir factura -->
-                        <input type="button">
+                        <div class="contentPrintBill" >
+                            <input id="buttonReturn" type="button">
+                            <p> Factura #</p>
+                            <input type="text" id="textCopy" autocomplete="off">
+                        </div>
                     </div> <!-- Pantalla imprimir factura -->
 
             
@@ -89,8 +93,15 @@
 
                     <div class="contentBill" > 
                         <div class="billingDetails1" >
-                            <p class="textBill1" >Factura #</p>
-                            <p class="numberBill" >1</p>
+                            <div>
+                                <p class="textBill1" >Factura #</p>
+                                <p class="numberBill" >1</p>
+                            </div>
+
+                            <div>
+                                <div><input id="saveBill" type="button" value=""></div>
+                                <div><input id="quoteBill" type="button" value=""></div>
+                            </div>
                         </div>
                         <div class="billingDetails2" >
                             <div class="subDetails1">
@@ -172,7 +183,7 @@
         </main> <!-- Centro -->
         <footer>
             <div class="contentFooter">
-                <p>Version 0.011</p>
+                <p>Version 0.012</p>
             </div>
         </footer>
     </div>
