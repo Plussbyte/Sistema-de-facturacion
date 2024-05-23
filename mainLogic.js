@@ -32,7 +32,8 @@
 
     //FACTURACION
 
-        //PRIMERA PANTALLA      
+        //PRIMERA PANTALLA
+            //PANTALLA DATOS CLIENTE      
                 document.getElementById('detailsButton').addEventListener('click',() =>{
                 //RESTRINGIR INPUTS
                     let nameDetailsWrite = document.getElementById('nameDetailsWrite') ,nameDetailsWrite2 = document.getElementById('nameDetailsWrite2') , nameDetailsWrite3 = document.getElementById('nameDetailsWrite3') ,nameDetailsWrite4 = document.getElementById('nameDetailsWrite4')
@@ -100,9 +101,9 @@
                     document.getElementById('secondBill').style.opacity = '1'
                     document.getElementById('secondBill').style.pointerEvents = 'auto'
                 // Pruebas --------------
-            })
+                })
 
-            //TEXTO DE INPUTS
+                //TEXTO DE INPUTS
 
                     //Elimina el texto predeterminado si el usuario hace click
                     nameDetailsWrite.addEventListener('focus',() =>{
@@ -155,8 +156,16 @@
                             nameDetailsWrite4.style.color = 'gray'
                         }                       
                     })
-            //TEXTO DE INPUTS
+                //TEXTO DE INPUTS
+            //PANTALLA DATOS CLIENTE
+            
+            //PANTALLA IMPRIMIR FACTURAS
+                let clientScreen = document.getElementById('detailsContent')
+                document.getElementById('copyBillButton').addEventListener('click',()=>{
+                    clientScreen.style.right = '450px'
+                })
 
+            //PANTALLA IMPRIMIR FACTURAS
 
         //PRIMERA PANTALLA
 
