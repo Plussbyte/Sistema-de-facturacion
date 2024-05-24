@@ -15,7 +15,7 @@
     })
 
     document.getElementById('billButton').addEventListener('click',() =>{
-        document.getElementById('billing').style.display = 'initial'
+        document.getElementById('billing').style.display = 'flex'
         document.getElementById('firstBill').style.display = 'initial'
             document.getElementById('secondBill').style.opacity = '.5'
             document.getElementById('secondBill').style.pointerEvents = 'none'

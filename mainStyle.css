@@ -352,25 +352,68 @@ body{
                 margin: 5px 0 0 0;
             }
 
-            #saveBill{
-                height: 30px;
-                width: 30px;
-                background-image: url(Guardar.png);
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: 20px 20px;
-                margin:  5px 0 0 0;
-            }
+            /*BOTON GUARDAR FACURA Y COTIZAR*/
 
-            #quoteBill{
-                height: 30px;
-                width: 30px;
-                background-image: url(Cotizar.png);
-                background-position: 4px;
-                background-repeat: no-repeat;
-                background-size: 20px 20px;
-                margin: 5px 20px 0 20px;
-            }
+                #saveBill{
+                    height: 30px;
+                    width: 30px;
+                    background-image: url(Guardar.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 20px 20px;
+                    margin:  5px 0 0 0;
+                }
+
+                #quoteBill{
+                    height: 30px;
+                    width: 30px;
+                    background-image: url(Cotizar.png);
+                    background-position: 4px;
+                    background-repeat: no-repeat;
+                    background-size: 20px 20px;
+                    margin: 5px 20px 0 20px;
+
+                
+                }
+
+                .saveBillText{
+                    &::after{
+                        content:"Guardar factura";
+                        background-color: white;
+                        position: absolute;
+                        border: black 2px solid;
+                        border-radius: 3px;
+                        right: 30px;
+                        top: -15px;
+                        white-space: nowrap;
+                        pointer-events: none;
+                        opacity: 0;
+                        padding: 0 3px 0 3px;
+                    }
+
+                    &:hover::after{
+                        opacity: 1;
+                    }
+                }
+
+                .quoteBillText{
+                    &::after{
+                        content:"Cotización";
+                        background-color: white;
+                        position: absolute;
+                        border: black 2px solid;
+                        border-radius: 3px;
+                        top: -15px;
+                        pointer-events: none;
+                        opacity: 0;
+                        padding: 0 3px 0 3px;
+                    }
+                    &:hover::after{
+                        opacity: 1;
+                    }
+                }
+
+            /*BOTON GUARDAR FACURA Y COTIZAR*/
 
             .billingDetails2{
                 display: grid;
@@ -481,6 +524,14 @@ body{
 
         /*SEGUNDA PANTALLA*/
 
+        /*TERCERA PANTALLA*/
+            .history{
+                display: flex;
+                background-color: #e42820;
+                position: relative;
+                top: 0;
+            }
+        /*TERCERA PANTALLA*/    
     /*FACTURACION*/
 
     /*INVENTARIO*/
