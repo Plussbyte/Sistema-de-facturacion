@@ -158,7 +158,7 @@ body{
             flex: 1;
             width: 100%;
             height: 100%;
-            overflow: hidden;
+            overflow:scroll;
         }
     /*FACTURACION*/
         #billing{
@@ -398,6 +398,7 @@ body{
                             position: absolute;
                             border: black 2px solid;
                             border-radius: 3px;
+                            max-height: min-content;
                             right: 30px;
                             top: -12px;
                             white-space: nowrap;
@@ -552,7 +553,7 @@ body{
         /*TERCERA PANTALLA*/
             #record{
                 display: flex;
-                width: 13%;
+                width:max-content;
                 flex-direction: column;
                 align-items: center;
                 background-color: #e42820;
