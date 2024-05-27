@@ -73,7 +73,7 @@
                             }
                         }
                         // Bucle que determina si hay numeros o letras en el arreglo
-
+                    
                     if(arrayTextNameDetailsWrite.length === iterador && iterador2 === 0){
                         lock = 0
                     } else if(arrayTextNameDetailsWrite.length !== iterador){
@@ -81,8 +81,8 @@
                     } else if(iterador2 > 0){
                         lock = 2
                     } else {
-                }
-                  
+                    
+                    }
    
                 //RESTRINGIR INPUTS
                 if(nameDetailsWrite.value !== 'Documento' && nameDetailsWrite2.value !== 'Teléfono' && nameDetailsWrite3.value !== 'Nombre' && nameDetailsWrite4.ariaValueMin !== 'Correo' && lock === 0){// ----> Verifica todos los inputs
@@ -113,13 +113,18 @@
 
                 }
 
-                // Pruebas --------------
+                document.getElementById('warningFirstBill').classList.add('newClassWarning')
+                setTimeout(() => {
+                    document.getElementById('warningFirstBill').classList.remove('newClassWarning')
+                }, 500);
+
+                /* Pruebas --------------
                     document.getElementById('firstBill').style.display = 'none'
                     document.getElementById('secondBill').style.opacity = '1'
                     document.getElementById('secondBill').style.pointerEvents = 'auto'
                     document.getElementById('record').style.opacity = '1'
                     document.getElementById('record').style.pointerEvents = 'auto'
-                // Pruebas --------------
+                // Pruebas --------------*/
                 })
 
                 //TEXTO DE INPUTS
@@ -209,8 +214,22 @@
         //PRIMERA PANTALLA
 
         //SEGUNDA PANTALLA
-
-
+            //Boton final de factura (Boton Facturar)
+                document.getElementById('finalInvoiceButton').addEventListener('click',()=>{
+                    document.getElementById('loadingScreenBill').style.display = 'flex'
+                    document.getElementById('secondBill').style.opacity = '0.5'
+                    document.getElementById('secondBill').style.pointerEvents = 'none'
+                    document.getElementById('record').style.opacity = '0.5'
+                    document.getElementById('record').style.pointerEvents = 'none'
+                    setTimeout(() => {
+                        document.getElementById('loadingScreenBill').style.display = 'none'
+                        document.getElementById('secondBill').style.opacity = '1'
+                        document.getElementById('secondBill').style.pointerEvents = 'auto'
+                        document.getElementById('record').style.opacity = '1'
+                        document.getElementById('record').style.pointerEvents = 'auto'
+                    }, 2000);
+                })
+            //Boton final de factura (Boton Facturar)
         //SEGUNDA PANTALLA
 
     //FACTURACION
