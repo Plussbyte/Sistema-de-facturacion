@@ -53,7 +53,7 @@
                     let nameDetailsWrite = document.getElementById('nameDetailsWrite') ,nameDetailsWrite2 = document.getElementById('nameDetailsWrite2') , nameDetailsWrite3 = document.getElementById('nameDetailsWrite3') ,nameDetailsWrite4 = document.getElementById('nameDetailsWrite4')
                     let arrayTextNameDetailsWrite = nameDetailsWrite.value.split("").concat(nameDetailsWrite2.value.split(""))
                     let arrayTextNameDetailsWrite2 = nameDetailsWrite3.value.split("")
-                    console.log(arrayTextNameDetailsWrite)
+                    console.log(arrayTextNameDetailsWrite2)
                     let iterador = 0 , iterador2 = 0
 
                         // Bucle que determina si hay numeros o letras en el arreglo
@@ -68,10 +68,13 @@
                         for(let i = 0;i<arrayTextNameDetailsWrite2.length;i++){ // En este caso permite letras
                             for(let a = 0;a<=9;a++){
                                 if(arrayTextNameDetailsWrite2[i] == a){
-                                    iterador2++
+                                    if(arrayTextNameDetailsWrite2[i] !== ' '){ //Arregla el problema de 0 = ' ':true
+                                        iterador2++
+                                    }                                    
                                 }
                             }
                         }
+                        console.log(iterador2)
                         // Bucle que determina si hay numeros o letras en el arreglo
                     
                     if(arrayTextNameDetailsWrite.length === iterador && iterador2 === 0){
