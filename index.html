@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="mainStyle.css">
-    <link rel="icon" href="/cropped-favicon-cye-v3-1-1-32x32.webp">
+    <link rel="stylesheet" href="/css/mainStyle.css">
+    <link rel="icon" href="images/cropped-favicon-cye-v3-1-1-32x32.webp">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; object-src 'none';">
     <title>Sistema de facturación</title>
 </head>
@@ -12,7 +12,7 @@
     <!-- HOLA GITHUB 0.019-->
     <header>
         <div id="usuarioContent"> <!-- Login -->
-            <img src="Logo C&E.svg" alt="">
+            <img src="/images/Logo C&E.svg" alt="">
     
             <p class="textUser1" >Bienvenido</p>
             <div>
@@ -33,7 +33,7 @@
     
          <!-- Encabezado -->
             <div class="nameContent">
-                <img src="Logo C&E.svg" alt="">
+                <img src="/images/Logo C&E.svg" alt="">
                 <h1>Sistema de facturación</h1>
                 <p id="change">Cambiar de usuario</p>
             </div>
@@ -44,11 +44,13 @@
                 <a class="listBill" href="https://cajasyempaquesdecolombia.com/" target="_blank" rel="noopener noreferrer">Pagina web</a>
             </div>
     </header> <!-- Encabezado -->
+        
+        <main> 
+            <!-- Facturacion -->
+            <div id="billing"> 
 
-        <main> <!-- Centro -->
-            <div id="billing"> <!-- Facturacion -->
-
-                <div id="firstBill"> <!-- Primera pantalla -->
+                <!-- Primera pantalla -->
+                <div id="firstBill"> 
                     <div id="detailsContent" >
                         <div class="subDetailsContent">
                             <div class="textDetails" >
@@ -73,7 +75,6 @@
                             <div class="firstBillContentButton" >
                                 <p id="warningFirstBill" ></p>
                                 <input  id="detailsButton" type="button" value="Aceptar">
-                                
                             </div>
                         </div>  
                         
@@ -265,6 +266,6 @@
             </div>
         </footer>
     </div>
-    <script src="mainLogic.js"></script>
+    <script type="module" src="/js/main.js"></script>
 </body>
 </html>

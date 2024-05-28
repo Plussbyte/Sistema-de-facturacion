@@ -281,7 +281,7 @@ body{
                     .contentCopyBill input{
                         height: 30px;
                         width: 30px;
-                        background-image: url(/Imprimir.png);
+                        background-image: url(/images/Imprimir.png);
                         background-size: 35px 22px;
                         background-position: center;
                         background-repeat: no-repeat;
@@ -303,7 +303,7 @@ body{
                         height: 25px;
                         width: 28px;
                         margin: 3px 0 0 3px;
-                        background-image: url(flechaIzquierda);
+                        background-image: url(/images/flechaIzquierda);
                         background-size: 21px 21px;
                         background-position: center;
                         background-repeat: no-repeat;
@@ -389,7 +389,7 @@ body{
                     #saveBill{
                         height: 35px;
                         width: 35px;
-                        background-image: url(Guardar.png);
+                        background-image: url(/images/Guardar.png);
                         background-position: center;
                         background-repeat: no-repeat;
                         background-size: 23px 23px;
@@ -399,7 +399,7 @@ body{
                     #quoteBill{
                         height: 35px;
                         width: 35px;
-                        background-image: url(Cotizar.png);
+                        background-image: url(/images/Cotizar.png);
                         background-position: 5px;
                         background-repeat: no-repeat;
                         background-size: 25px 25px;
