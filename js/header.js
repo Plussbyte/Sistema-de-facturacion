@@ -26,11 +26,16 @@
                 document.getElementById('secondBill').style.opacity = '.5'
                 document.getElementById('secondBill').style.pointerEvents = 'none'
                 document.getElementById('warningFirstBill').innerText = ''
+                
+                //Elimina los datos anteriores para nueva factura
+                    document.getElementById('documentBill').innerText =''
+                    document.getElementById('phoneBill').innerText = ''
+                    document.getElementById('nameBill').innerText = ''
+                    document.getElementById('adressBill').innerText = ''
 
                 // Blokea la tercera pantalla
                     document.getElementById('record').style.pointerEvents = 'none'
                     document.getElementById('record').style.opacity = '0.5'
-                // Blokea la tercera pantalla
 
                 nameDetailsWrite.value = 'Documento', nameDetailsWrite.style.color = 'grey'
                 nameDetailsWrite2.value = 'Teléfono', nameDetailsWrite2.style.color = 'grey'

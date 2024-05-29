@@ -188,6 +188,12 @@ export function center(){
                             document.getElementById('secondBill').style.pointerEvents = 'auto'
                             document.getElementById('record').style.opacity = '1'
                             document.getElementById('record').style.pointerEvents = 'auto'
+
+                            //Elimina los datos anteriores para nueva factura
+                                document.getElementById('documentBill').innerText =''
+                                document.getElementById('phoneBill').innerText = ''
+                                document.getElementById('nameBill').innerText = ''
+                                document.getElementById('adressBill').innerText = ''
                         }, 2000);
                     })
                 //Boton final de factura (Boton Facturar)
