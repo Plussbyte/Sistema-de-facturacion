@@ -137,6 +137,17 @@ body{
             }
         }
 
+        #inventoryButton{
+            margin: 0 5px;
+            padding: 2px 10px;
+            cursor: pointer;
+            color: white;
+            text-decoration: none;
+            &:hover{
+                background-color:#9c1c18;
+            }
+        }
+
         .listBill{
             margin: 0 5px;
             padding: 2px 10px;
@@ -269,9 +280,9 @@ body{
                                 padding: 2px;
                                 border: 1px black solid;
                                 border-radius: 2px;
-                                top: 0px;
+                                top: 32px;
                                 left: 0px;
-                                position: relative;
+                                position: absolute;
                                 pointer-events: none;
                                 display: none;
                                 
@@ -302,8 +313,8 @@ body{
                                 padding: 2px;
                                 border: 1px black solid;
                                 border-radius: 2px;
-                                top: 70px;
-                                right: 50px;
+                                top: 32px;
+                                right: 0px;
                                 position: absolute;
                                 pointer-events: none;
                                 display: none;
@@ -703,6 +714,24 @@ body{
             }
 
         /*TERCERA PANTALLA*/    
+        
+        /*Cuarta pantalla*/
+            #fourScreen{
+                display: flex;
+                position: absolute;
+                background-color: #e42820;
+                border: 2px white solid;
+                border-radius: 10px;
+                height: 600px;
+                width: 300px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+
+
+        /*Cuarta pantalla*/    
+
     /*FACTURACION*/
 
     /*INVENTARIO*/

@@ -1,4 +1,4 @@
-
+// HEADER
     export function head(){
         // Boton aceptar usuario (Boton Ingresar)
         document.getElementById('buttonAcept').addEventListener('click',() =>{

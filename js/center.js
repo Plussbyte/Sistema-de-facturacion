@@ -1,94 +1,115 @@
-export function center(){
-    // MAIN
-        //FACTURACION
-            //PRIMERA PANTALLA
-                //PANTALLA DATOS CLIENTE      
-                document.getElementById('detailsButton').addEventListener('click',() =>{
-                    console.log('Button clicked')
-                    //RESTRINGIR INPUTS
-                        let nameDetailsWrite = document.getElementById('nameDetailsWrite') ,nameDetailsWrite2 = document.getElementById('nameDetailsWrite2') , nameDetailsWrite3 = document.getElementById('nameDetailsWrite3') ,nameDetailsWrite4 = document.getElementById('nameDetailsWrite4')
-                        let arrayTextNameDetailsWrite = nameDetailsWrite.value.split("").concat(nameDetailsWrite2.value.split(""))
-                        let arrayTextNameDetailsWrite2 = nameDetailsWrite3.value.split("")
-                        console.log(arrayTextNameDetailsWrite2)
-                        let iterador = 0 , iterador2 = 0, lock = 0
+// MAIN
+import { closeScreen } from './utils.js' // <---------- Cierra la segunda y la tercera pantalla
 
-                            // Bucle que determina si hay numeros o letras en el arreglo
-                            for(let i = 0;i<arrayTextNameDetailsWrite.length;i++){  // En este caso permite numeros 
-                                for(let a = 0;a<=9;a++){
-                                    if(arrayTextNameDetailsWrite[i] == a){
-                                        iterador++
+export function finalUser(){ //<----------- Boton de usuario final 
+    document.getElementById('finalUser').addEventListener('click',()=>{
+        // Desblokea la segunda y tercera pantalla y quita la primera
+            document.getElementById('firstBill').style.display = 'none'
+            document.getElementById('secondBill').style.opacity = '1'
+            document.getElementById('secondBill').style.pointerEvents = 'auto'
+            document.getElementById('record').style.opacity = '1'
+            document.getElementById('record').style.pointerEvents = 'auto'
+
+        // Desblokea la segunda y tercera pantalla y quita la primera
+            document.getElementById('documentBill').innerText = '2222222222'
+            document.getElementById('phoneBill').innerText = '0000000000'
+            document.getElementById('nameBill').innerText = 'Cliente final'
+            document.getElementById('adressBill').innerText = 'correo@gmail.com'
+    })
+}
+
+export function center(){ //<----------- Contiene todo el centro de la pagina
+
+    //FACTURACION
+            //PRIMERA PANTALLA
+                //PANTALLA DATOS CLIENTE
+                    // Boton para llenar los datos de clientes (Boton Aceptar)      
+                    document.getElementById('detailsButton').addEventListener('click',() =>{
+                        console.log('Button clicked')
+                        //RESTRINGIR INPUTS
+                            let nameDetailsWrite = document.getElementById('nameDetailsWrite') ,nameDetailsWrite2 = document.getElementById('nameDetailsWrite2') , nameDetailsWrite3 = document.getElementById('nameDetailsWrite3') ,nameDetailsWrite4 = document.getElementById('nameDetailsWrite4')
+                            let arrayTextNameDetailsWrite = nameDetailsWrite.value.split("").concat(nameDetailsWrite2.value.split(""))
+                            let arrayTextNameDetailsWrite2 = nameDetailsWrite3.value.split("")
+                            console.log(arrayTextNameDetailsWrite2)
+                            let iterador = 0 , iterador2 = 0, lock = 0
+
+                                // Bucle que determina si hay numeros o letras en el arreglo
+                                for(let i = 0;i<arrayTextNameDetailsWrite.length;i++){  // En este caso permite numeros 
+                                    for(let a = 0;a<=9;a++){
+                                        if(arrayTextNameDetailsWrite[i] == a){
+                                            iterador++
+                                        }
                                     }
                                 }
-                            }
-                                        
-                            for(let i = 0;i<arrayTextNameDetailsWrite2.length;i++){ // En este caso permite letras
-                                for(let a = 0;a<=9;a++){
-                                    if(arrayTextNameDetailsWrite2[i] == a){
-                                        if(arrayTextNameDetailsWrite2[i] !== ' '){ //Arregla el problema de 0 = ' ':true
-                                            iterador2++
-                                        }                                    
+                                            
+                                for(let i = 0;i<arrayTextNameDetailsWrite2.length;i++){ // En este caso permite letras
+                                    for(let a = 0;a<=9;a++){
+                                        if(arrayTextNameDetailsWrite2[i] == a){
+                                            if(arrayTextNameDetailsWrite2[i] !== ' '){ //Arregla el problema de 0 = ' ':true
+                                                iterador2++
+                                            }                                    
+                                        }
                                     }
                                 }
+                                console.log(iterador2)
+                                // Bucle que determina si hay numeros o letras en el arreglo
+                            
+                            if(arrayTextNameDetailsWrite.length === iterador && iterador2 === 0){
+                                lock = 0
+                            } else if(arrayTextNameDetailsWrite.length !== iterador){
+                                lock = 1
+                            } else if(iterador2 > 0){
+                                lock = 2
+                            } else {
+                            
                             }
-                            console.log(iterador2)
-                            // Bucle que determina si hay numeros o letras en el arreglo
                         
-                        if(arrayTextNameDetailsWrite.length === iterador && iterador2 === 0){
-                            lock = 0
-                        } else if(arrayTextNameDetailsWrite.length !== iterador){
-                            lock = 1
-                        } else if(iterador2 > 0){
-                            lock = 2
-                        } else {
-                        
+                        //RESTRINGIR INPUTS
+                        if(nameDetailsWrite.value !== 'Documento' && nameDetailsWrite2.value !== 'Teléfono' && nameDetailsWrite3.value !== 'Nombre' && nameDetailsWrite4.ariaValueMin !== 'Correo' && lock === 0){// ----> Verifica todos los inputs
+                            //DESBLOKEAR FACTURACION
+                                document.getElementById('firstBill').style.display = 'none'
+                                document.getElementById('secondBill').style.opacity = '1'
+                                document.getElementById('secondBill').style.pointerEvents = 'auto'
+                                document.getElementById('record').style.opacity = '1'
+                                document.getElementById('record').style.pointerEvents = 'auto'
+
+                            //DESBLOKEAR FACTURACION
+
+                            //MOSTRAR DATOS USUARIO
+                                document.getElementById('documentBill').innerText = nameDetailsWrite.value
+                                document.getElementById('phoneBill').innerText = nameDetailsWrite2.value
+                                document.getElementById('nameBill').innerText = nameDetailsWrite3.value
+                                document.getElementById('adressBill').innerText = nameDetailsWrite4.value
+                            //MOSTRAR DATOS USUARIO 
+
+                            document.getElementById('warningFirstBill').innerText = ''
+                        }else if(lock === 1){
+                            document.getElementById('warningFirstBill').innerText = 'Verifique que el documento y el teléfono contengan numeros'
+                        }else if(lock === 2){
+                            document.getElementById('warningFirstBill').innerText = 'Verifique que el nombre no contenga numeros'
+                        }else if(lock === 3){
+                            document.getElementById('warningFirstBill').innerText = 'Error'
+                        } else{ document.getElementById('warningFirstBill').innerText = 'Verifique que los campos esten completos'
+
                         }
-                    
-                    //RESTRINGIR INPUTS
-                    if(nameDetailsWrite.value !== 'Documento' && nameDetailsWrite2.value !== 'Teléfono' && nameDetailsWrite3.value !== 'Nombre' && nameDetailsWrite4.ariaValueMin !== 'Correo' && lock === 0){// ----> Verifica todos los inputs
-                        //DESBLOKEAR FACTURACION
+
+                        document.getElementById('warningFirstBill').classList.add('newClassWarning')
+                        setTimeout(() => {
+                            document.getElementById('warningFirstBill').classList.remove('newClassWarning')
+                        }, 500);
+
+                        /* Pruebas --------------
                             document.getElementById('firstBill').style.display = 'none'
                             document.getElementById('secondBill').style.opacity = '1'
                             document.getElementById('secondBill').style.pointerEvents = 'auto'
                             document.getElementById('record').style.opacity = '1'
                             document.getElementById('record').style.pointerEvents = 'auto'
-
-                        //DESBLOKEAR FACTURACION
-
-                        //MOSTRAR DATOS USUARIO
-                            document.getElementById('documentBill').innerText = nameDetailsWrite.value
-                            document.getElementById('phoneBill').innerText = nameDetailsWrite2.value
-                            document.getElementById('nameBill').innerText = nameDetailsWrite3.value
-                            document.getElementById('adressBill').innerText = nameDetailsWrite4.value
-                        //MOSTRAR DATOS USUARIO 
-
-                        document.getElementById('warningFirstBill').innerText = ''
-                    }else if(lock === 1){
-                        document.getElementById('warningFirstBill').innerText = 'Verifique que el documento y el teléfono contengan numeros'
-                    }else if(lock === 2){
-                        document.getElementById('warningFirstBill').innerText = 'Verifique que el nombre no contenga numeros'
-                    }else if(lock === 3){
-                        document.getElementById('warningFirstBill').innerText = 'Error'
-                    } else{ document.getElementById('warningFirstBill').innerText = 'Verifique que los campos esten completos'
-
-                    }
-
-                    document.getElementById('warningFirstBill').classList.add('newClassWarning')
-                    setTimeout(() => {
-                        document.getElementById('warningFirstBill').classList.remove('newClassWarning')
-                    }, 500);
-
-                    /* Pruebas --------------
-                        document.getElementById('firstBill').style.display = 'none'
-                        document.getElementById('secondBill').style.opacity = '1'
-                        document.getElementById('secondBill').style.pointerEvents = 'auto'
-                        document.getElementById('record').style.opacity = '1'
-                        document.getElementById('record').style.pointerEvents = 'auto'
-                    // Pruebas --------------*/
-                    })
+                        // Pruebas --------------*/
+                        })
 
                     //TEXTO DE INPUTS
 
-                        //Elimina el texto predeterminado si el usuario hace click
+                        //Elimina el texto predeterminado en documento,nombre etc... si el usuario hace click
                         nameDetailsWrite.addEventListener('focus',() =>{
                             if(nameDetailsWrite.value === 'Documento'){
                                 nameDetailsWrite.value = ''
@@ -156,7 +177,7 @@ export function center(){
                         }, 100)
                         setTimeout(()=>{
                             clientScreen.style.display = 'none'
-                        }, 600)                    
+                        }, 500)                    
                     })
 
                     document.getElementById('buttonReturn').addEventListener('click', ()=>{
@@ -167,7 +188,7 @@ export function center(){
                         }, 100);
                         setTimeout(()=>{
                             printBill.style.display = 'none'
-                        }, 600)
+                        }, 500)
                     })
 
                 // IMPRIMIR FACTURAS PANTALLA 
@@ -194,10 +215,22 @@ export function center(){
                                 document.getElementById('phoneBill').innerText = ''
                                 document.getElementById('nameBill').innerText = ''
                                 document.getElementById('adressBill').innerText = ''
+
+                            //Cierra la segunda y la tercera pantalla
+                                closeScreen()
+                            
+                            //Abre la primera pantalla
+                                document.getElementById('firstBill').style.display = 'initial'
                         }, 2000);
                     })
                 //Boton final de factura (Boton Facturar)
             //SEGUNDA PANTALLA
-        //FACTURACION
-    // MAIN
+    //FACTURACION
 }
+
+export function invetory(){// <---------- Logica del invetario
+        document.getElementById('inventoryButton').addEventListener('click',()=>{
+            document.getElementById('billing').style.display = 'none'
+        })
+}
+// MAIN
