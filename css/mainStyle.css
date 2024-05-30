@@ -167,7 +167,8 @@ body{
         main{
             display:flex;
             flex: 1;
-
+            height: 100%;
+            width: 100%;
         }
     /*FACTURACION*/
         #billing{
@@ -516,16 +517,18 @@ body{
                 .coating{
                     display: flex;
                     width: 100%;
+                    height: auto;
                     align-items: center;
                     justify-content: center;
                     flex-direction: column;
+
                 }
 
                 .coatingInto{
                     margin-top: 10px;
                     width: 98%;
                     border-radius: 10px 10px 0 0px;
-                    overflow: hidden;
+                    overflow: scroll;
                 }
 
                 .coatingInto div{
@@ -724,8 +727,8 @@ body{
                 border-radius: 10px;
                 height: 600px;
                 width: 300px;
-                top: 50%;
                 left: 50%;
+                top: 50%;
                 transform: translate(-50%,-50%);
             }
 
