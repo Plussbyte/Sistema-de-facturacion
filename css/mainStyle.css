@@ -719,20 +719,136 @@ body{
         /*TERCERA PANTALLA*/    
         
         /*Cuarta pantalla*/
+
             #fourScreen{
                 display: flex;
                 position: absolute;
+                align-items: center;
+                flex-direction: column;
                 background-color: #e42820;
-                border: 2px white solid;
+                border: 2px #9c1c18 solid;
                 border-radius: 10px;
-                height: 600px;
-                width: 300px;
+                height: 35em;
+                width: 23em;
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%,-50%);
             }
 
+            /*Estilos parrafos y input text*/
+                .contentTextWrite{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
 
+                .textValue{
+                    color: white;
+                    margin-right: 10px;
+                }
+
+                #writeValue{
+                    height: 1.375em;
+                }
+
+            /*Estilos botones CTC*/
+                .contentButtonCTC{
+                    display: flex;
+                }
+
+                .contentButtonCTC div{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 6.07em;
+                    margin: 0;
+                }
+
+                .contentButtonCTC p{
+                    padding: 3px;
+                    border-radius: 10px;
+                    background-color: white;
+                    margin: 0 0 3px 0;
+                }
+
+                .textCTC1{
+                    border: 2px rgb(21, 255, 0) solid;
+                }
+
+                .textCTC2{
+                    border: 2px rgb(111, 0, 255) solid;
+                }
+
+                .textCTC3{
+                    border: 2px rgb(255, 251, 0) solid;
+                }
+
+                .textCTC4{
+                    border: 2px rgb(4, 0, 255) solid;
+                }
+
+                #cash{
+                    border: 2px rgb(21, 255, 0) solid;
+                    border-radius: 10px;
+                    background-image: url(/images/Efectivo.png);
+                    background-position: center;
+                    background-size: 2.5em 2.5em;
+                    background-repeat: no-repeat;
+                    height: 3em;
+                    width: 3em;
+                    &:hover{
+                        transform: scale(.8);
+
+                    }
+                }
+
+                #transfer{
+                    border: 2px rgb(111, 0, 255) solid;
+                    border-radius: 10px;
+                    background-image: url(/images/Transferencia.png);
+                    background-position: center;
+                    background-size: 2.5em 2.5em;
+                    background-repeat: no-repeat;
+                    height: 3em;
+                    width: 3em;
+                    &:hover{
+                        transform: scale(.8);
+                    
+                    }
+                }
+
+                #card{
+                    border: 2px rgb(255, 251, 0) solid;
+                    border-radius: 10px;
+                    background-image: url(/images/Tarjeta.png);
+                    background-position: center;
+                    background-size: 2.5em 2.5em;
+                    background-repeat: no-repeat;
+                    height: 3em;
+                    width: 3em;
+                    &:hover{
+                        transform: scale(.8);
+                    
+                    }
+                }
+
+                #several{
+                    
+                    border: 2px rgb(4, 0, 255) solid;
+                    border-radius: 10px;
+                    background-image: url(/images/Mezcla.png);
+                    background-position: center;
+                    background-size: 2.5em 2.5em;
+                    background-repeat: no-repeat;
+                    height: 3em;
+                    width: 3em;
+                    &:hover{
+                        transform: scale(.8);
+                    
+                    }
+                    
+                }
         /*Cuarta pantalla*/    
 
     /*FACTURACION*/
