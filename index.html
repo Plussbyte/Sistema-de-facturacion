@@ -9,7 +9,7 @@
     <title>Sistema de facturación</title>
 </head>
 <body>
-    <!-- HOLA GITHUB 0.023-->
+    <!-- HOLA GITHUB 0.024-->
 
     <!-- Header -->
         <header>
@@ -273,10 +273,21 @@
                 <!-- Cuarta pantalla -->
                     <div id="fourScreen">
                         <div class="contentTextWrite">
-                            <p class="textValue">Valor:</p>
-                            <input id="writeValue" type="text">
-                            <input id="writeValue2" type="text">
+                            <div>
+                                <p id="textValue">Valor:</p>
+                                <input id="writeValue" type="text">
+                            </div>
+                            <div id="contentTextWriteSeveral" >
+                                <p class="textValue2">Transferencia o tarjeta:</p>
+                                <input id="writeValue2" type="text">
+                            </div>
                         </div>
+
+                        <div id="contentButtonSeveral">
+                            <input id="buttonSeveral" type="button" value="Aceptar">
+                            <input id="buttonReturnSeveral" type="button" value="Volver">
+                        </div>
+
                         <div class="contentButtonCTC">
                             <div>
                                 <p class="textCTC1" >Efectivo</p>
@@ -308,7 +319,7 @@
         </main> <!-- Centro -->
         <footer>
             <div class="contentFooter">
-                <p>Version 0.023</p>
+                <p>Version 0.024</p>
             </div>
         </footer>
     </div>

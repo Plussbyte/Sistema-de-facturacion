@@ -194,41 +194,62 @@ export function center(){ //<----------- Contiene todo el centro de la pagina
                 // IMPRIMIR FACTURAS PANTALLA 
 
             //PRIMERA PANTALLA
-
-            //SEGUNDA PANTALLA
-                //Boton final de factura (Boton Facturar)
-                    document.getElementById('finalInvoiceButton').addEventListener('click',()=>{
-                        document.getElementById('loadingScreenBill').style.display = 'flex'
-                        document.getElementById('secondBill').style.opacity = '0.5'
-                        document.getElementById('secondBill').style.pointerEvents = 'none'
-                        document.getElementById('record').style.opacity = '0.5'
-                        document.getElementById('record').style.pointerEvents = 'none'
-                        setTimeout(() => {
-                            document.getElementById('loadingScreenBill').style.display = 'none'
-                            document.getElementById('secondBill').style.opacity = '1'
-                            document.getElementById('secondBill').style.pointerEvents = 'auto'
-                            document.getElementById('record').style.opacity = '1'
-                            document.getElementById('record').style.pointerEvents = 'auto'
-
-                            //Elimina los datos anteriores para nueva factura
-                                document.getElementById('documentBill').innerText =''
-                                document.getElementById('phoneBill').innerText = ''
-                                document.getElementById('nameBill').innerText = ''
-                                document.getElementById('adressBill').innerText = ''
-
-                            //Cierra la segunda y la tercera pantalla
-                                closeScreen()
-                            
-                            //Abre la primera pantalla
-                                document.getElementById('firstBill').style.display = 'initial'
-                        }, 2000);
-                    })
-                //Boton final de factura (Boton Facturar)
-            //SEGUNDA PANTALLA
-    //FACTURACION
 }
 
-export function invetory(){// <---------- Logica del invetario
+export function secondScreenBill(){ // <---------- Logica segunda pantalla de factura
+    //Boton final de factura (Boton Facturar)
+        document.getElementById('finalInvoiceButton').addEventListener('click',()=>{
+            document.getElementById('loadingScreenBill').style.display = 'flex'
+            document.getElementById('secondBill').style.opacity = '0.5'
+            document.getElementById('secondBill').style.pointerEvents = 'none'
+            document.getElementById('record').style.opacity = '0.5'
+            document.getElementById('record').style.pointerEvents = 'none'
+            setTimeout(() => {
+                document.getElementById('loadingScreenBill').style.display = 'none'
+                document.getElementById('secondBill').style.opacity = '1'
+                document.getElementById('secondBill').style.pointerEvents = 'auto'
+                document.getElementById('record').style.opacity = '1'
+                document.getElementById('record').style.pointerEvents = 'auto'
+
+                //Elimina los datos anteriores para nueva factura
+                    document.getElementById('documentBill').innerText =''
+                    document.getElementById('phoneBill').innerText = ''
+                    document.getElementById('nameBill').innerText = ''
+                    document.getElementById('adressBill').innerText = ''
+                //Cierra la segunda y la tercera pantalla
+                    closeScreen()
+                            
+                //Abre la primera pantalla
+                    document.getElementById('firstBill').style.display = 'initial'
+            }, 2000);
+        })
+
+    //Logica de botones posfacturas
+        //Boton varios metodos de pago
+            document.getElementById('several').addEventListener('click',()=>{
+                document.getElementById('contentTextWriteSeveral').style.display = 'flex'
+                document.getElementById('textValue').innerText = 'Efectivo:'
+                document.getElementById('textValue').style.margin = '0 .5em 0 0'
+                document.getElementById('cash').style.borderColor = 'grey'
+                document.getElementById('cash').style.pointerEvents = 'none'
+                document.getElementById('transfer').style.borderColor = 'grey'
+                document.getElementById('transfer').style.pointerEvents = 'none'
+                document.getElementById('card').style.borderColor = 'grey'
+                document.getElementById('card').style.pointerEvents = 'none'
+            })
+        //Boton Volver medios de pago
+            document.getElementById('buttonReturnSeveral').addEventListener('click',()=>{
+                document.getElementById('cash').style.borderColor = 'initial'
+                document.getElementById('cash').style.pointerEvents = 'auto'
+                document.getElementById('transfer').style.borderColor = 'rgb(111, 0, 255)'
+                document.getElementById('transfer').style.pointerEvents = 'auto'
+                document.getElementById('card').style.borderColor = 'rgb(255, 251, 0)'
+                document.getElementById('card').style.pointerEvents = 'auto'
+            })
+}
+
+//FACTURACION
+export function invetory(){ // <---------- Logica del invetario
         document.getElementById('inventoryButton').addEventListener('click',()=>{
             document.getElementById('billing').style.display = 'none'
         })

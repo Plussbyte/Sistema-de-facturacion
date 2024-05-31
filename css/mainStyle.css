@@ -728,7 +728,7 @@ body{
                 background-color: #e42820;
                 border: 2px #9c1c18 solid;
                 border-radius: 10px;
-                height: 35em;
+                height: 25em;
                 width: 23em;
                 left: 50%;
                 top: 50%;
@@ -740,15 +740,48 @@ body{
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    margin: 1em 0 1em 0;
+                }
+                .contentTextWrite div{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 1em;
+                }
+                #contentTextWriteSeveral{
+                    display: none;
+                    margin-right: 1em;
                 }
 
-                .textValue{
+                #textValue{
                     color: white;
-                    margin-right: 10px;
+                    margin: 0 .9em 0 0;
                 }
 
                 #writeValue{
                     height: 1.375em;
+                    width: 6em;
+                    border-radius: 5px;
+                }                
+                .textValue2{
+                    color: white;
+                    margin: 0 .9em 0 0;
+
+                }
+
+                #writeValue2{
+                    height: 1.375em;
+                    width: 6em;
+                    border-radius: 5px;
+                }
+
+            /*Estilos boton de varios metodos de pago*/
+                #contentButtonSeveral{
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 100%;
+                    margin-bottom: 2em;
                 }
 
             /*Estilos botones CTC*/
@@ -797,10 +830,9 @@ body{
                     background-repeat: no-repeat;
                     height: 3em;
                     width: 3em;
-                    &:hover{
-                        transform: scale(.8);
-
-                    }
+                }
+                #cash:hover{
+                    border-color: black;
                 }
 
                 #transfer{
@@ -812,10 +844,9 @@ body{
                     background-repeat: no-repeat;
                     height: 3em;
                     width: 3em;
-                    &:hover{
-                        transform: scale(.8);
-                    
-                    }
+                }
+                #transfer:hover{
+                    border-color: black;
                 }
 
                 #card{
@@ -827,10 +858,9 @@ body{
                     background-repeat: no-repeat;
                     height: 3em;
                     width: 3em;
-                    &:hover{
-                        transform: scale(.8);
-                    
-                    }
+                }                
+                #card:hover{
+                    border-color: black;
                 }
 
                 #several{
@@ -843,12 +873,11 @@ body{
                     background-repeat: no-repeat;
                     height: 3em;
                     width: 3em;
-                    &:hover{
-                        transform: scale(.8);
-                    
-                    }
-                    
                 }
+                #several:hover{
+                    border-color: black;
+                }
+            
         /*Cuarta pantalla*/    
 
     /*FACTURACION*/
