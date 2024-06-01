@@ -777,11 +777,19 @@ body{
 
             /*Estilos boton de varios metodos de pago*/
                 #contentButtonSeveral{
-                    display: flex;
+                    display: none;
                     justify-content: space-around;
                     align-items: center;
                     width: 100%;
                     margin-bottom: 2em;
+                }
+
+                #buttonSeveral{
+
+                }
+
+                #buttonReturnSeveral{
+
                 }
 
             /*Estilos botones CTC*/
@@ -805,19 +813,19 @@ body{
                     margin: 0 0 3px 0;
                 }
 
-                .textCTC1{
+                #textCTC1{
                     border: 2px rgb(21, 255, 0) solid;
                 }
 
-                .textCTC2{
+                #textCTC2{
                     border: 2px rgb(111, 0, 255) solid;
                 }
 
-                .textCTC3{
+                #textCTC3{
                     border: 2px rgb(255, 251, 0) solid;
                 }
 
-                .textCTC4{
+                #textCTC4{
                     border: 2px rgb(4, 0, 255) solid;
                 }
 

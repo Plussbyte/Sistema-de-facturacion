@@ -227,24 +227,85 @@ export function secondScreenBill(){ // <---------- Logica segunda pantalla de fa
     //Logica de botones posfacturas
         //Boton varios metodos de pago
             document.getElementById('several').addEventListener('click',()=>{
+
+                hover('cash',1)
+                hover('transfer',1)
+                hover('card',1)
+                hover('several',1)
+
                 document.getElementById('contentTextWriteSeveral').style.display = 'flex'
+                document.getElementById('contentButtonSeveral').style.display = 'flex'
+
                 document.getElementById('textValue').innerText = 'Efectivo:'
                 document.getElementById('textValue').style.margin = '0 .5em 0 0'
+
+                document.getElementById('textCTC1').style.borderColor = 'grey'
                 document.getElementById('cash').style.borderColor = 'grey'
                 document.getElementById('cash').style.pointerEvents = 'none'
+                
+                document.getElementById('textCTC2').style.borderColor = 'grey'
                 document.getElementById('transfer').style.borderColor = 'grey'
                 document.getElementById('transfer').style.pointerEvents = 'none'
+
+                document.getElementById('textCTC3').style.borderColor = 'grey'
                 document.getElementById('card').style.borderColor = 'grey'
                 document.getElementById('card').style.pointerEvents = 'none'
+
+                document.getElementById('textCTC4').style.borderColor = 'grey'
+                document.getElementById('several').style.borderColor = 'grey'
+                document.getElementById('several').style.pointerEvents = 'none'
+
             })
         //Boton Volver medios de pago
+            function hover(ID,color){
+                let name = document.getElementById(ID)
+                if(color === 1){ 
+                    name.addEventListener('mouseover',()=>{
+                        name.style.borderColor = 'gray'
+                    })
+
+                    name.addEventListener('mouseout',()=>{
+                        name.style.borderColor = 'gray'
+                    })
+
+                }else{
+                    name.addEventListener('mouseover',()=>{
+                        name.style.borderColor = 'Black'
+                    })
+
+                    name.addEventListener('mouseout',()=>{
+                        name.style.borderColor = color
+                    })
+                }
+            }
+
             document.getElementById('buttonReturnSeveral').addEventListener('click',()=>{
-                document.getElementById('cash').style.borderColor = 'initial'
+
+                document.getElementById('contentTextWriteSeveral').style.display = 'none'
+                document.getElementById('contentButtonSeveral').style.display = 'none'
+
+                document.getElementById('textValue').innerText = 'Valor:'
+
+                document.getElementById('textCTC1').style.borderColor = 'rgb(21, 255, 0)'
+                document.getElementById('cash').style.borderColor = 'rgb(21, 255, 0)'
                 document.getElementById('cash').style.pointerEvents = 'auto'
+
+                document.getElementById('textCTC2').style.borderColor = 'rgb(111, 0, 255)'
                 document.getElementById('transfer').style.borderColor = 'rgb(111, 0, 255)'
                 document.getElementById('transfer').style.pointerEvents = 'auto'
+
+                document.getElementById('textCTC3').style.borderColor = 'rgb(255, 251, 0)'
                 document.getElementById('card').style.borderColor = 'rgb(255, 251, 0)'
                 document.getElementById('card').style.pointerEvents = 'auto'
+
+                document.getElementById('textCTC4').style.borderColor = 'rgb(4, 0, 255)'
+                document.getElementById('several').style.borderColor = 'rgb(4, 0, 255)'
+                document.getElementById('several').style.pointerEvents = 'auto'
+
+                hover('cash','rgb(21, 255, 0)')
+                hover('transfer','rgb(111, 0, 255)')
+                hover('card','rgb(255, 251, 0)')
+                hover('several','rgb(4, 0, 255)')
             })
 }
 
