@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/mainStyle.css">
+    <link rel="stylesheet" href="/css/animation.css">
     <link rel="icon" href="images/cropped-favicon-cye-v3-1-1-32x32.webp">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; object-src 'none';">
     <title>Sistema de facturación</title>
 </head>
 <body>
-    <!-- HOLA GITHUB 0.025-->
+    <!-- HOLA GITHUB 0.026-->
 
     <!-- Header -->
         <header>
@@ -43,6 +44,7 @@
                 <div class="listContent">
                     <div id="billButton">Facturar</div>
                     <div id="inventoryButton">Inventario</div>
+                    <div id="transfersButton">Traslados</div>
                     <div class="listBill">Anular</div>
                     <a class="listBill" href="https://cajasyempaquesdecolombia.com/" target="_blank" rel="noopener noreferrer">Pagina web</a>
                 </div>
@@ -240,15 +242,6 @@
                         </div>
                     </div>
                 <!-- Segunda pantalla -->
-                <!-- Pantalla de carga  -->
-                    <div id="loadingScreenBill">
-                        <p>Cargando</p>
-                        <div class="animationPoint" ></div>
-                        <div class="animationPoint" ></div>
-                        <div class="animationPoint" ></div>
-                    </div>
-                <!-- Pantalla de carga -->
-
                 <!-- Tercera pantalla -->
                     <div id="record"> 
                         <div class="textRecord">Historial</div>
@@ -269,6 +262,14 @@
                         <div class="cellRecord" ></div>
                     </div> 
                 <!-- Tercera pantalla -->
+                <!-- Pantalla de carga  -->
+                    <div id="loadingScreenBill">
+                        <p>Cargando</p>
+                        <div class="animationPoint" ></div>
+                        <div class="animationPoint" ></div>
+                        <div class="animationPoint" ></div>
+                    </div>
+                <!-- Pantalla de carga -->
 
                 <!-- Cuarta pantalla -->
                     <div id="fourScreen">
@@ -306,20 +307,23 @@
                                 <input id="several" type="button" value="">
                             </div>
                         </div>
+                        <div class="contentButtonCancelCTC">
+                            <input id="cancelCTC" type="button" value="Cancelar">
+                        </div>
                     </div>
                 <!-- Cuarta pantalla -->
             </div> 
             <!-- Facturacion -->
 
             <!-- Inventario -->
-                <div id="inventory"> 
-                </div>
+            <div id="inventory"> 
+            </div>
             <!-- Inventario -->
 
         </main> <!-- Centro -->
-        <footer>
+        <footer id="footer">
             <div class="contentFooter">
-                <p>Version 0.025</p>
+                <p>Version 0.026</p>
             </div>
         </footer>
     </div>

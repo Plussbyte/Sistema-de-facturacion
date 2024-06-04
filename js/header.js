@@ -15,12 +15,15 @@
         
         document.getElementById('change').addEventListener('click',() =>{
             document.getElementById('usuarioContent').style.display = 'flex'
-            document.getElementById('all').style.opacity = '.2'
+            document.getElementById('all').style.opacity = '.5'
             document.getElementById('all').style.pointerEvents = 'none'
+            document.getElementById('footer').style.opacity = '.5'
+            document.getElementById('footer').style.pointerEvents = 'none'
         })
 
         // Boton abrir la facturacion (Boton facturar)
             document.getElementById('billButton').addEventListener('click',() =>{
+                document.getElementById('fourScreen').style.display = 'none'
                 document.getElementById('billing').style.display = 'flex'
                 document.getElementById('firstBill').style.display = 'initial'
                 document.getElementById('secondBill').style.opacity = '.5'

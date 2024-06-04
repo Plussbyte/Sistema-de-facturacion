@@ -1,5 +1,6 @@
 // MAIN
-import { closeScreen } from './utils.js' // <---------- Cierra la segunda y la tercera pantalla
+import { closeScreenSecond } from './utils.js' // <---------- Cierra la segunda y la tercera pantalla
+import { openScreenSecond} from './utils.js' // <---------- Abre la segunda y la tercera pantalla
 
 export function finalUser(){ //<----------- Boton de usuario final 
     document.getElementById('finalUser').addEventListener('click',()=>{
@@ -199,29 +200,9 @@ export function center(){ //<----------- Contiene todo el centro de la pagina
 export function secondScreenBill(){ // <---------- Logica segunda pantalla de factura
     //Boton final de factura (Boton Facturar)
         document.getElementById('finalInvoiceButton').addEventListener('click',()=>{
-            document.getElementById('loadingScreenBill').style.display = 'flex'
-            document.getElementById('secondBill').style.opacity = '0.5'
-            document.getElementById('secondBill').style.pointerEvents = 'none'
-            document.getElementById('record').style.opacity = '0.5'
-            document.getElementById('record').style.pointerEvents = 'none'
-            setTimeout(() => {
-                document.getElementById('loadingScreenBill').style.display = 'none'
-                document.getElementById('secondBill').style.opacity = '1'
-                document.getElementById('secondBill').style.pointerEvents = 'auto'
-                document.getElementById('record').style.opacity = '1'
-                document.getElementById('record').style.pointerEvents = 'auto'
-
-                //Elimina los datos anteriores para nueva factura
-                    document.getElementById('documentBill').innerText =''
-                    document.getElementById('phoneBill').innerText = ''
-                    document.getElementById('nameBill').innerText = ''
-                    document.getElementById('adressBill').innerText = ''
-                //Cierra la segunda y la tercera pantalla
-                    closeScreen()
-                            
-                //Abre la primera pantalla
-                    document.getElementById('firstBill').style.display = 'initial'
-            }, 2000);
+            document.getElementById('fourScreen').style.display = 'flex'
+            //Cierra la segunda y la tercera pantalla
+                closeScreenSecond()
         })
 
     //Logica de botones posfacturas
@@ -307,6 +288,109 @@ export function secondScreenBill(){ // <---------- Logica segunda pantalla de fa
                 hover('card','rgb(255, 251, 0)')
                 hover('several','rgb(4, 0, 255)')
             })
+
+            // Logica del boton [ aceptar ] medios de pago
+                document.getElementById('buttonSeveral').addEventListener('click',()=>{
+                    document.getElementById('buttonReturnSeveral').click()
+                    document.getElementById('loadingScreenBill').style.display = 'flex'
+                    document.getElementById('secondBill').style.opacity = '0.5'
+                    document.getElementById('secondBill').style.pointerEvents = 'none'
+                    document.getElementById('record').style.opacity = '0.5'
+                    document.getElementById('record').style.pointerEvents = 'none'
+                    document.getElementById('fourScreen').style.display = 'none'
+                    setTimeout(() => {
+                        
+                        document.getElementById('loadingScreenBill').style.display = 'none'
+        
+                        //Elimina los datos anteriores para nueva factura
+                            document.getElementById('documentBill').innerText =''
+                            document.getElementById('phoneBill').innerText = ''
+                            document.getElementById('nameBill').innerText = ''
+                            document.getElementById('adressBill').innerText = ''
+                        //Cierra la segunda y la tercera pantalla
+                            closeScreenSecond()
+                                    
+                        //Abre la primera pantalla
+                            document.getElementById('firstBill').style.display = 'initial'
+                    }, 2000);
+                })
+
+            // Logica boton [ efectivo ]
+                document.getElementById('cash').addEventListener('click',()=>{
+                    document.getElementById('loadingScreenBill').style.display = 'flex'
+                    document.getElementById('secondBill').style.opacity = '0.5'
+                    document.getElementById('secondBill').style.pointerEvents = 'none'
+                    document.getElementById('record').style.opacity = '0.5'
+                    document.getElementById('record').style.pointerEvents = 'none'
+                    document.getElementById('fourScreen').style.display = 'none'
+                    setTimeout(() => {
+                        document.getElementById('loadingScreenBill').style.display = 'none'
+                        //Elimina los datos anteriores para nueva factura
+                            document.getElementById('documentBill').innerText =''
+                            document.getElementById('phoneBill').innerText = ''
+                            document.getElementById('nameBill').innerText = ''
+                            document.getElementById('adressBill').innerText = ''
+                        //Cierra la segunda y la tercera pantalla
+                            closeScreenSecond()
+                                    
+                        //Abre la primera pantalla
+                            document.getElementById('firstBill').style.display = 'initial'
+                    }, 2000);
+                })
+
+            // Logica boton [ transferencia ]
+                document.getElementById('transfer').addEventListener('click',()=>{
+                    document.getElementById('loadingScreenBill').style.display = 'flex'
+                    document.getElementById('secondBill').style.opacity = '0.5'
+                    document.getElementById('secondBill').style.pointerEvents = 'none'
+                    document.getElementById('record').style.opacity = '0.5'
+                    document.getElementById('record').style.pointerEvents = 'none'
+                    document.getElementById('fourScreen').style.display = 'none'
+                    setTimeout(() => {
+                        document.getElementById('loadingScreenBill').style.display = 'none'
+                        //Elimina los datos anteriores para nueva factura
+                            document.getElementById('documentBill').innerText =''
+                            document.getElementById('phoneBill').innerText = ''
+                            document.getElementById('nameBill').innerText = ''
+                            document.getElementById('adressBill').innerText = ''
+                        //Cierra la segunda y la tercera pantalla
+                            closeScreenSecond()
+                                    
+                        //Abre la primera pantalla
+                            document.getElementById('firstBill').style.display = 'initial'
+                    }, 2000);
+                })
+
+            // Logica boton [ tarjeta ]
+                document.getElementById('card').addEventListener('click',()=>{
+                    document.getElementById('loadingScreenBill').style.display = 'flex'
+                    document.getElementById('secondBill').style.opacity = '0.5'
+                    document.getElementById('secondBill').style.pointerEvents = 'none'
+                    document.getElementById('record').style.opacity = '0.5'
+                    document.getElementById('record').style.pointerEvents = 'none'
+                    document.getElementById('fourScreen').style.display = 'none'
+                    setTimeout(() => {
+                        document.getElementById('loadingScreenBill').style.display = 'none'
+                        //Elimina los datos anteriores para nueva factura
+                            document.getElementById('documentBill').innerText =''
+                            document.getElementById('phoneBill').innerText = ''
+                            document.getElementById('nameBill').innerText = ''
+                            document.getElementById('adressBill').innerText = ''
+                        //Cierra la segunda y la tercera pantalla
+                            closeScreenSecond()
+                                    
+                        //Abre la primera pantalla
+                            document.getElementById('firstBill').style.display = 'initial'
+                    }, 2000);
+                })
+            // Logica boton [ Cancelar ]
+                document.getElementById('cancelCTC').addEventListener('click',()=>{
+                    document.getElementById('fourScreen').style.display = 'none'
+                    document.getElementById('buttonReturnSeveral').click()
+                    openScreenSecond()
+                })
+
+                
 }
 
 //FACTURACION
