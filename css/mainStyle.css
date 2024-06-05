@@ -889,20 +889,48 @@ body{
 
     /*FACTURACION*/
 
-    /*INVENTARIO*/
+    /*Utilidades*/
 
-        #inventory{
-            display: inline-block;
+        #utilityContainer{
+            display: flex;
+            justify-content: space-between;
             width: 98.5%;
-            height: 97%;
+            height: 96%;
             margin: auto;
-            background-color: #e42820;
-            border-radius: 10px;
+            overflow:hidden;
         }
 
+        /*Estilos inventario*/
+            .inventoryContainer{
+                display: flex;
+                height: 80%;
+                width: 48%;
+                background-color: #e42820;
+                border-radius: 20px 0 20px 0;
+            }
 
+        /*Estilos Boton circulo del medio*/
+            .usefulCircleButton{
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-80%);
+                height: 10em;
+                width: 10em;
+                max-width: 12em;
+                border-radius: 50%;
+                background-color: white;
+                
+            }
 
-    /*INVENTARIO*/
+        /*Estilos traslados*/
+            .movedContainer{
+                display: flex;
+                height: 80%;
+                width: 48%;
+                background-color: #e42820;
+                border-radius: 0 20px 0 20px;
+            }
 
 /* MAIN */
 
