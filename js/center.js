@@ -312,7 +312,7 @@ export function secondScreenBill(){ // <---------- Logica segunda pantalla de fa
                                     
                         //Abre la primera pantalla
                             document.getElementById('firstBill').style.display = 'initial'
-                    }, 2000);
+                    }, 2000)
                 })
 
             // Logica boton [ efectivo ]
@@ -335,7 +335,7 @@ export function secondScreenBill(){ // <---------- Logica segunda pantalla de fa
                                     
                         //Abre la primera pantalla
                             document.getElementById('firstBill').style.display = 'initial'
-                    }, 2000);
+                    }, 2000)
                 })
 
             // Logica boton [ transferencia ]
@@ -358,7 +358,7 @@ export function secondScreenBill(){ // <---------- Logica segunda pantalla de fa
                                     
                         //Abre la primera pantalla
                             document.getElementById('firstBill').style.display = 'initial'
-                    }, 2000);
+                    }, 2000)
                 })
 
             // Logica boton [ tarjeta ]
@@ -381,22 +381,16 @@ export function secondScreenBill(){ // <---------- Logica segunda pantalla de fa
                                     
                         //Abre la primera pantalla
                             document.getElementById('firstBill').style.display = 'initial'
-                    }, 2000);
+                    }, 2000)
                 })
             // Logica boton [ Cancelar ]
                 document.getElementById('cancelCTC').addEventListener('click',()=>{
                     document.getElementById('fourScreen').style.display = 'none'
                     document.getElementById('buttonReturnSeveral').click()
                     openScreenSecond()
-                })
-
-                
+                })            
 }
 
 //FACTURACION
-export function invetory(){ // <---------- Logica del invetario
-        document.getElementById('inventoryButton').addEventListener('click',()=>{
-            document.getElementById('billing').style.display = 'none'
-        })
-}
+
 // MAIN

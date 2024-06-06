@@ -29,6 +29,7 @@
                 document.getElementById('secondBill').style.opacity = '.5'
                 document.getElementById('secondBill').style.pointerEvents = 'none'
                 document.getElementById('warningFirstBill').innerText = ''
+                document.getElementById('utilityContainer').style.display = 'none'
                 
                 //Elimina los datos anteriores para nueva factura
                     document.getElementById('documentBill').innerText =''
@@ -45,6 +46,13 @@
                 nameDetailsWrite3.value = 'Nombre', nameDetailsWrite3.style.color = 'grey'
                 nameDetailsWrite4.value = 'Correo', nameDetailsWrite4.style.color = 'grey'
             })
-        // Boton abrir la facturacion (Boton facturar)
+
     }
+
+export function utilitiesButton(){
+    document.getElementById('utilitiesButton').addEventListener('click',()=>{
+        document.getElementById('billing').style.display = 'none'
+        document.getElementById('utilityContainer').style.display = 'flex'
+    })
+}
 // HEADER
