@@ -10,7 +10,13 @@
     <title>Sistema de facturación</title>
 </head>
 <body>
-    <!-- HOLA GITHUB 0.028-->
+    <!-- HOLA GITHUB 0.029-->
+
+    <!-- Codigo pre-carga-->
+        <div class="preDownload">
+            <img src="./images/flecha curva roja.png" alt="Preload Image">
+        </div>
+    <!-- Codigo pre-carga-->
 
     <!-- Header -->
         <header>
@@ -315,23 +321,46 @@
             <!-- Facturacion -->
 
             <!-- Utilidades -->
-            <div id="utilityContainer"> 
-                <div class="inventoryContainer"></div>
-                <div class="usefulCircleButton">
-                    <div id="buttonUsefulCircle"> 
-                        <img class="arrowCircle" src="./images/flecha curva.png">
-                        <p class="textCircle">Pasar referencia</p>
-                        <img class="arrowCircle2" src="./images/flecha curva.png">
-                    </div>
-                </div>
-                <div class="movedContainer" ></div>
-            </div>  
+                <div id="utilityContainer"> 
+                    <!--Inventario-->
+                        <div class="inventoryContainer">
+                            <div class="topOfInventory"> <!-- Parte top del inventario -->
+                                <div class="containerSeachInventory">
+                                    <p class="nameInvetory" >Inventario</p>
+                                    <div class="subContainerSeachInventory" >
+                                        <input type="text">
+                                        <input type="button" value="">
+                                    </div>
+                                    <input class="buttonCancelSI" type="button" value="Cancelar">
+                                </div>
+                                <div>
+                                    <p>Filtro</p>
+                                    <input type="text">
+                                    <input type="button" value="">
+                                </div>
+                            </div>
+                            <div class="bottomOfInventory"></div><!-- Parte bottom del inventario -->
+                        </div>
+                    <!--Inventario-->
+
+                    <!--Boton circulo-->
+                        <div class="usefulCircleButton"> 
+                            <div id="buttonUsefulCircle"> 
+                                <img id="arrowCircle" class="arrowCircle" src="./images/flecha curva.png">
+                                <p id="textCircle" class="textCircle">Pasar referencia</p>
+                                <img id="arrowCircle2" class="arrowCircle2" src="./images/flecha curva.png">
+                            </div>
+                        </div>
+                    <!--Boton circulo-->
+
+                    <div class="movedContainer" ></div>
+                </div>  
             <!-- Utilidades -->
 
         </main> <!-- Centro -->
         <footer id="footer">
             <div class="contentFooter">
-                <p>Version 0.028</p>
+                <p>Version 0.029</p>
             </div>
         </footer>
     </div>

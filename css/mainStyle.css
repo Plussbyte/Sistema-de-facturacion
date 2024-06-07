@@ -1,3 +1,8 @@
+/*Precarga*/
+    .preDownload{
+        display: none;
+    }
+
 html,body{
     margin: 0;
     height: 100%;
@@ -900,11 +905,51 @@ body{
         /*Estilos inventario*/
             .inventoryContainer{
                 display: flex;
+                flex-direction: column;
+                justify-content: space-between;
                 height: 80%;
                 width: 48%;
                 background-color: #e42820;
                 border-radius: 20px 0 20px 0;
             }
+
+        /*Estilos parte de ( arriba ) del inventario*/
+            .topOfInventory{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 91%;
+                margin: 2% 7% 0 2%;
+            }
+            /*Estilos buscar factura*/
+                .containerSeachInventory{
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                }
+                .nameInvetory{
+                    font-size: 2em;
+                    margin: 0;
+                    color: white;
+                }
+                .buttonCancelSI{
+                    width: 5em;
+                }
+                /*Sub estilos buscar factura*/
+                    .subContainerSeachInventory{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+        /*Estilos parte de ( abajo ) del inventario*/
+            .bottomOfInventory{
+                height: 73%;
+                width: 91%;
+                margin: 0 7% 2% 2%;
+                border: 1px white solid;
+            }
+                
 
         /*Estilos Boton circulo del medio*/
             .usefulCircleButton{
@@ -915,46 +960,51 @@ body{
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-80%);
-                height: 10em;
-                width: 10em;
+                height: 9em;
+                width: 9em;
                 min-height: 2em;
                 min-width: 2em;
                 border-radius: 50%;
                 background-color: white;
-                
             }
+
             /*Estilo boton circulo*/
                 #buttonUsefulCircle{
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     flex-direction: column;
-                    height: 9em;
-                    width: 9em;
+                    height: 8em;
+                    width: 8em;
                     border-radius: 50%;
                     background-color: #e42820;
+                    &:hover{
+                        cursor: pointer;
+                    }
                 }
+
                 /*Estilo flecha boton*/
                     .arrowCircle{
                         position: relative;
                         top: 2em;
-                        height: 5em;
-                        width: 5em;
+                        height: 4em;
+                        width: 4em;
                         transform: rotate(40deg);
                     }
                 /*Estilo segunda flecha boton*/
                     .arrowCircle2{
                         position: relative;
                         bottom: 2em;
-                        height: 5em;
-                        width: 5em;
+                        height: 4em;
+                        width: 4em;
                         transform: rotate(210deg);
                     }
                 /*Estilo letra boton*/
                     .textCircle{
+
                         position: relative;
                         color: white;
-                        font-size: 1.3em;
+                        font-size: 1.1em;
                     }
 
         /*Estilos traslados*/
