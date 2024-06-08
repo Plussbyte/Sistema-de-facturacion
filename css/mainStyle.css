@@ -919,7 +919,7 @@ body{
                 justify-content: space-between;
                 align-items: center;
                 width: 91%;
-                margin: 2% 7% 0 2%;
+                margin: 0 7% 0 2%;
             }
             /*Estilos buscar factura*/
                 .containerSeachInventory{
@@ -927,29 +927,48 @@ body{
                     justify-content: center;
                     flex-direction: column;
                 }
+
+                .inputTXSeachI{
+                    width: 7em;
+                }
+
+                .inputBNSeachI{
+                    width: 2em;
+                }
+
                 .nameInvetory{
-                    font-size: 2em;
+                    font-size: 4em;
                     margin: 0;
                     color: white;
+                    font-stretch: ultra-expanded;
                 }
+
                 .buttonCancelSI{
-                    width: 5em;
+                    margin-left: 2em;
+                    height: 2em;
+                    width: 4.5em;
+                    padding: 0;
                 }
                 /*Sub estilos buscar factura*/
                     .subContainerSeachInventory{
                         display: flex;
-                        justify-content: center;
                         align-items: center;
                     }
 
         /*Estilos parte de ( abajo ) del inventario*/
             .bottomOfInventory{
-                height: 73%;
-                width: 91%;
-                margin: 0 7% 2% 2%;
+                display: flex;
+                flex-direction: column;
+                height: 63%;
+                width: 89%;
+                margin: 0 9% 2% 2%;
                 border: 1px white solid;
             }
-                
+            /*d*/
+                .bottomOfInventory input{
+                    height: 14%;
+                }
+                    
 
         /*Estilos Boton circulo del medio*/
             .usefulCircleButton{
@@ -1001,7 +1020,6 @@ body{
                     }
                 /*Estilo letra boton*/
                     .textCircle{
-
                         position: relative;
                         color: white;
                         font-size: 1.1em;
