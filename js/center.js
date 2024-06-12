@@ -394,6 +394,29 @@ import { openScreenSecond} from './utils.js' // <---------- Abre la segunda y la
 // Utilidades
     export function utilityButtonCircle(){ // <---- Contiene la logica del boton circulo 
 
+        function moved(){ //<---- Funcion que contiene la logica de la pantalla de traslados
+            //Logica de punto a punto
+                const selectPointOne = document.getElementById('selectPointOne')
+                const selectPointTwo = document.getElementById('selectPointTwo')
+
+                selectPointOne.addEventListener('click',()=>{
+                    selectPointOne.style.color = 'black'
+                })
+
+                selectPointOne.addEventListener('blur',()=>{
+                    selectPointOne.style.color = 'gray'
+                })
+
+                selectPointTwo.addEventListener('click',()=>{
+                    selectPointTwo.style.color = 'black'
+                })
+
+                selectPointTwo.addEventListener('blur',()=>{
+                    selectPointTwo.style.color = 'gray'
+                })
+        }
+        moved()
+
         //Controla el hover del boton circulo
             let buttonCircle = document.getElementById('buttonUsefulCircle')
             buttonCircle.addEventListener('mouseover',()=>{
@@ -410,5 +433,6 @@ import { openScreenSecond} from './utils.js' // <---------- Abre la segunda y la
                 document.getElementById('arrowCircle').src = './images/flecha curva.png'
                 document.getElementById('arrowCircle2').src = './images/flecha curva.png'
             })
+ 
     }
 
