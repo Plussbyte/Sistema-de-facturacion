@@ -398,22 +398,6 @@ import { openScreenSecond} from './utils.js' // <---------- Abre la segunda y la
             //Logica de punto a punto
                 const selectPointOne = document.getElementById('selectPointOne')
                 const selectPointTwo = document.getElementById('selectPointTwo')
-
-                selectPointOne.addEventListener('click',()=>{
-                    selectPointOne.style.color = 'black'
-                })
-
-                selectPointOne.addEventListener('blur',()=>{
-                    selectPointOne.style.color = 'gray'
-                })
-
-                selectPointTwo.addEventListener('click',()=>{
-                    selectPointTwo.style.color = 'black'
-                })
-
-                selectPointTwo.addEventListener('blur',()=>{
-                    selectPointTwo.style.color = 'gray'
-                })
         }
         moved()
 

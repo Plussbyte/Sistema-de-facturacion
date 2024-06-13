@@ -927,6 +927,13 @@ body{
                         justify-content: center;
                         flex-direction: column;
                     }
+                    
+                    .nameInvetory{
+                        font-size: 4em;
+                        margin: 0;
+                        color: white;
+                        font-stretch: ultra-expanded;
+                    }
 
                     .inputTXSeachI{
                         width: 7em;
@@ -940,11 +947,9 @@ body{
                         width: 2em;
                     }
 
-                    .nameInvetory{
-                        font-size: 4em;
-                        margin: 0;
+                    .nameSeachI{
                         color: white;
-                        font-stretch: ultra-expanded;
+                        margin: 0;
                     }
 
                     .buttonCancelSI{
@@ -973,7 +978,7 @@ body{
                     .spaceOfBottom{
                         display: grid;
                         grid-template-columns: 100%;
-                        height: 70%;
+                        grid-template-rows: repeat(10,1.5em);
                         width: 99%;
                         border: 1px white solid;
                         border-radius: 10px;
@@ -1020,16 +1025,16 @@ body{
                             grid-template-columns: 18% 50% 20% 12%;
                             background-color: gray;
                         }
-                        .ID{
+                        .invID{
                             text-align: center;
                         }
-                        .reference{
+                        .invreference{
                             text-align: center;                       
                         }
-                        .store{
+                        .invstore{
                             text-align: center;                    
                         }
-                        .amount{
+                        .invamount{
                             text-align: center;                        
                         }
 
@@ -1099,39 +1104,26 @@ body{
                 border-radius: 0 20px 0 20px;
             }
             .maginSpace{
-                border: 1px white solid;
                 height: 90%;
                 width: 87%;
                 margin-left: 3em;
             }
-            /*Estilos parte (arriba) de traslados*/
+            /*Estilos parte (arriba) de traslados*/                
                 .nameMoved{
                     font-size: 4em;
                     margin: 0;
                     color: white;
                 }
+                
                 .topOfMoved{
                     display: flex;
+                    justify-content: space-around;
                     align-items: center;
-                }
-                .contentSeachMoved{
-                    display: flex;
-                }
-                .inputTXSeachT{
-                    width: 7em;
-                }
-                .inputBNSeachT{
-                    background-image: url(/images/Buscar.png);
-                    background-position: center;
-                    background-size: 1em 1em;
-                    background-repeat: no-repeat;
-                    width: 2em;
                 }
                 /*Estilos punto a punto*/
                     .pointByPoint{
                         display: flex;                    
-                        flex-direction: column;
-                        margin: 0 0 0 2em;                    
+                        flex-direction: column;                  
                     }
                     .point{
                         display: flex;
@@ -1143,17 +1135,64 @@ body{
                         color: white;
                     }
 
-                    .point select{
-                        color: gray;
+                    .point select option[disabled]{
+                        display: none;
                     }
                 
-                .buttonCancelST{
-                    margin: 0 0 0 2em;
-                    height: 2em;
-                    width: 4.5em;
-                    padding: 0;
+                /*Estilos imprimir traslado*/
+                .containerPrintMoved{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
                 }
-
+                .containerPrintMoved p{
+                    color: white;
+                    margin: 0;
+                }
+                .subContainerPrintMoved{
+                    display: flex;
+                }
+                .inputTXPrintT{
+                    text-align: center;
+                    width: 6em;
+                }
+                .inputBNPrintT{
+                    margin-top: 2px;
+                    height: 2.1em;
+                    width: 2.1em;
+                    background-image: url(/images/Imprimir.png);
+                    background-position: center;
+                    background-size: 2.4em 1.6em;
+                    background-repeat: no-repeat;
+                }
+            /*Estilos parte (abajo) de traslados*/
+                .bottomOfMoved{
+                    display: grid;
+                    grid-template-columns: 100%;
+                    grid-template-rows: repeat(10,1.5em);
+                    border: 1px white solid;
+                    border-radius: 10px;
+                    margin-top: 10px;
+                    overflow: hidden;
+                }
+                .nameListMoved{
+                    display: grid;
+                    grid-template-columns: 18% 50% 20% 12%;
+                    background-color: gray;
+                }
+                .centerListMoved{
+                    display: grid;
+                    grid-template-columns: 18% 50% 20% 12%;
+                }
+                .centerListMoved2{
+                    display: grid;
+                    grid-template-columns: 18% 50% 20% 12%;
+                }
+            /*Estilo boton final de traslados*/
+                .finalButtonMoved{
+                    margin: 1em 0 0 2em;
+                }
 /* MAIN */
 
 /* FOOTER */
