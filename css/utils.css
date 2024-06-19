@@ -1,0 +1,15 @@
+.noSelect{ /* <---- Desabilita inputs*/
+    
+        /* Deshabilita la selección de texto 
+        user-select: none;  CSS estándar 
+        -webkit-user-select: none; Safari y Chrome
+        -moz-user-select: none; Firefox
+        -ms-user-select: none; Internet Explorer/Edge
+        Opcional: Deshabilita la edición */
+
+        pointer-events:none; /* No permite interactuar con el input */
+        background-color: #f0f0f0; /* Cambia el fondo para indicar que es no editable */
+        /*color: #888;  Cambia el color del texto para indicar que es no editable */
+        border: 1px gray solid;
+}
+
