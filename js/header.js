@@ -1,25 +1,25 @@
 // HEADER
     export function head(){
         // Boton aceptar usuario (Boton Ingresar)
-        document.getElementById('buttonAcept').addEventListener('click',() =>{
-            document.getElementById('all').style.opacity = '1'
-            document.getElementById('all').style.pointerEvents = 'auto'
-            document.getElementById('usuarioContent').style.display = 'none'
-            // Desblokea el footer
-                document.querySelector('footer').style.pointerEvents = 'auto'
-                document.querySelector('footer').style.opacity = '1'
-            // Desblokea el footer
-        })
-        // Boton aceptar usuario (Boton Ingresar)
+            document.getElementById('buttonAcept').addEventListener('click',() =>{
+                document.getElementById('all').style.opacity = '1'
+                document.getElementById('all').style.pointerEvents = 'auto'
+                document.getElementById('usuarioContent').style.display = 'none'
+                // Desblokea el footer
+                    document.querySelector('footer').style.pointerEvents = 'auto'
+                    document.querySelector('footer').style.opacity = '1'
+                // Desblokea el footer
+            })
 
-        
-        document.getElementById('change').addEventListener('click',() =>{
-            document.getElementById('usuarioContent').style.display = 'flex'
-            document.getElementById('all').style.opacity = '.5'
-            document.getElementById('all').style.pointerEvents = 'none'
-            document.getElementById('footer').style.opacity = '.5'
-            document.getElementById('footer').style.pointerEvents = 'none'
-        })
+
+        // Boton cambiar de usuario
+            document.getElementById('change').addEventListener('click',() =>{
+                document.getElementById('usuarioContent').style.display = 'flex'
+                document.getElementById('all').style.opacity = '.5'
+                document.getElementById('all').style.pointerEvents = 'none'
+                document.getElementById('footer').style.opacity = '.5'
+                document.getElementById('footer').style.pointerEvents = 'none'
+            })
 
         // Boton abrir la facturacion (Boton facturar)
             document.getElementById('billButton').addEventListener('click',() =>{

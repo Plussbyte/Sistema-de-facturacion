@@ -3,14 +3,17 @@
         display: none;
     }
 
+
 html,body{
     margin: 0;
     height: 100%;
 }
-body{
+#all{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    opacity: .5;
+    pointer-events:none;
 }
 
 /*USUARIO*/
@@ -83,11 +86,6 @@ body{
 /*USUARIO*/
 
 /*HEADER*/
-
-    #all{
-        opacity: .5;
-        pointer-events:none;
-    }
 
     /*NAMECONTENT*/
 
@@ -891,15 +889,13 @@ body{
     /*FACTURACION*/
 
     /*Utilidades*/
-
         #utilityContainer{
             display: none;
             justify-content: space-between;
+            width: 100%;
             position: relative;
-            width: 98.5%;
-            height: 96%;
-            margin: auto;
             overflow:hidden;
+            margin: 1%;
         }
 
         /*Estilos inventario*/
@@ -1213,8 +1209,6 @@ body{
 
 /* FOOTER */
         footer{
-            display: inline-block;
-            opacity: 0.5;
             pointer-events: none;
         }
 
