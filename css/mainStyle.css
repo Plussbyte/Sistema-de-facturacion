@@ -891,13 +891,22 @@ html,body{
     /*Utilidades*/
         #utilityContainer{
             display: none;
-            justify-content: space-between;
-            height: 80%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             width: 100%;
-            position: relative;
-            overflow:hidden;
             margin: 1%;
+            position: relative;
         }
+
+            .subUtilityContainer{
+                display: flex;
+                justify-content: space-between;
+                height: 80%;
+                width: 100%;
+                position: relative;
+                overflow:hidden;
+            }
 
         /*Estilos inventario*/
             .inventoryContainer{
@@ -959,7 +968,7 @@ html,body{
                         background-color:#9c1c18;
                         margin:0;
                         max-width: 20;
-                        padding: 4px 0;
+                        padding: 4px 4px 4px 0;
                         border-radius: 0 5px 5px 0;
                     }
 
@@ -1206,6 +1215,41 @@ html,body{
                     height: 3em;
                     margin: 1em 0 0 2em;
                 }
+
+        /*Estilos de historial de utilidades*/
+            .containerRecordUtiliesStyle{
+                display: flex;
+                justify-content: space-between;
+                height: 20%;
+                width: 100%;
+            }
+            /*Estilos del historial de inventario*/
+                .recordInventory{
+                    background-color: #e42820;
+                    margin-top: 1%;
+                    width: 48%;
+                    border-radius: 0 20px 0 20px;  
+                }
+                    .textRecInv{
+                        margin: 5px 0 0 10px;
+                        color: white;
+                        font-size: 1.5em;
+                                              
+                    }
+            /*Estilos del historial de traslados*/
+                .recordMoved{
+                    background-color: #e42820;
+                    margin-top: 1%;                    
+                    width: 48%;
+                    border-radius: 20px 0 20px 0;
+                }
+                    .textRecMov{
+                        margin: 5px 0 0 10px;
+                        color: white;
+                        font-size: 1.5em;
+                                            
+                    }
+            
 /* MAIN */
 
 /* FOOTER */

@@ -325,209 +325,222 @@
 
             <!-- Utilidades -->
                 <div id="utilityContainer"> 
-                    <!--Inventario-->
-                        <div class="inventoryContainer">
-                            <div class="topOfInventory"> <!-- Parte top del inventario -->
-                                <div class="containerSeachInventory">
-                                    <p class="nameInvetory" >Inventario</p>
-                                    <p class="nameSeachI">Buscar referencia</p>
-                                    <div class="subContainerSeachInventory" >
-                                        <input class="inputTXSeachI" type="text">
-                                        <input class="inputBNSeachI" type="button" value="">
-                                        <p class="nameReferenceInv">Referencia:</p>
-                                        <p class="numberReferenceInv">Ejemplo</p>
+                    <div class="subUtilityContainer">
+                        <!--Inventario-->
+                            <div class="inventoryContainer">
+                                <div class="topOfInventory"> <!-- Parte top del inventario -->
+                                    <div class="containerSeachInventory">
+                                        <p class="nameInvetory" >Inventario</p>
+                                        <p class="nameSeachI">Buscar referencia</p>
+                                        <div class="subContainerSeachInventory" >
+                                            <input class="inputTXSeachI" type="text">
+                                            <input class="inputBNSeachI" type="button" value="">
+                                            <p class="nameReferenceInv">Referencia:</p>
+                                            <p class="numberReferenceInv">Ejemplo de esto</p>
+                                        </div>
+                                        <input class="buttonCancelSI" type="button" value="Cancelar">
                                     </div>
-                                    <input class="buttonCancelSI" type="button" value="Cancelar">
+                                </div>
+                                <div class="bottomOfInventory"><!-- Parte bottom del inventario -->
+                                    <div class="spaceOfBottom">
+                                        <div class="nameListInvetory">
+                                            <div class="nameID">ID</div>
+                                            <div class="nameReference" >Referencia</div>
+                                            <div class="nameStore" >Bodega</div>
+                                            <div class="nameAmount" >Cantidad</div>
+                                        </div>
+                                        <div class="centerListInventory">
+                                            <input  type="text" class="invID noSelect" readonly>
+                                            <input  type="text" class="invreference noSelect"  readonly>
+                                            <input  type="text" value="Bello" class="invstore noSelect"  readonly>
+                                            <input  type="text" class="invamount noSelect"  readonly>
+                                        </div>
+                                        <div class="centerListInventory2">
+                                            <input  type="text" class="invID noSelect" readonly>
+                                            <input  type="text" class="invreference noSelect"  readonly>
+                                            <input  type="text" value="Guayabal" class="invstore noSelect"  readonly>
+                                            <input  type="text" class="invamount noSelect"  readonly>
+                                        </div>
+                                        <div class="centerListInventory">
+                                            <input  type="text" class="invID noSelect" readonly>
+                                            <input  type="text" class="invreference noSelect"  readonly>
+                                            <input  type="text" value="Hueco" class="invstore noSelect"  readonly>
+                                            <input  type="text" class="invamount noSelect"  readonly>
+                                        </div>
+                                        <div class="centerListInventory2">
+                                            <input  type="text" class="invID noSelect" readonly>
+                                            <input  type="text" class="invreference noSelect"  readonly>
+                                            <input  type="text" value="Belen" class="invstore noSelect"  readonly>
+                                            <input  type="text" class="invamount noSelect"  readonly>
+                                        </div>
+                                        <div class="centerListInventory">
+                                            <input  type="text" class="invID noSelect" readonly>
+                                            <input  type="text" class="invreference noSelect"  readonly>
+                                            <input  type="text" value="Itagui" class="invstore noSelect"  readonly>
+                                            <input  type="text" class="invamount noSelect"  readonly>
+                                        </div>
+                                        <div class="centerListInventory2">
+                                            <input  type="text" class="invID noSelect" readonly>
+                                            <input  type="text" class="invreference noSelect"  readonly>
+                                            <input  type="text" value="Bodega planta" class="invstore noSelect"  readonly>
+                                            <input  type="text" class="invamount noSelect"  readonly>
+                                        </div>
+                                        <div class="centerListInventory">
+                                            <input  type="text" class="invID noSelect" readonly>
+                                            <input  type="text" class="invreference noSelect"  readonly>
+                                            <input  type="text" value="Total" class="invstore noSelect"  readonly>
+                                            <input  type="text" class="invamount noSelect"  readonly>
+                                        </div>
+                                        <div class="centerListInventory2">
+                                            <input  type="text" class="invID noSelect" readonly>
+                                            <input  type="text" class="invreference noSelect"  readonly>
+                                            <input  type="text" value="" class="invstore noSelect"  readonly>
+                                            <input  type="text" class="invamount noSelect"  readonly>
+                                        </div>
+                                        <div class="centerListInventory">
+                                            <input  type="text" class="invID noSelect"  readonly>
+                                            <input  type="text" class="invreference noSelect"   readonly>
+                                            <input  type="text" value="" class="invstore noSelect"   readonly>
+                                            <input  type="text" class="invamount noSelect"  readonly>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="bottomOfInventory"><!-- Parte bottom del inventario -->
-                                <div class="spaceOfBottom">
-                                    <div class="nameListInvetory">
+                        <!--Inventario-->
+
+                        <!--Boton circulo-->
+                            <div class="usefulCircleButton"> 
+                                <div id="buttonUsefulCircle"> 
+                                    <img id="arrowCircle" class="arrowCircle" src="./images/flecha curva.png">
+                                    <p id="textCircle" class="textCircle">Pasar referencia</p>
+                                    <img id="arrowCircle2" class="arrowCircle2" src="./images/flecha curva.png">
+                                </div>
+                            </div>
+                        <!--Boton circulo-->
+
+                        <!--Traslados--> 
+                        <div class="movedContainer" >
+                            <div class="maginSpace">
+                                <p class="nameMoved">Traslados</p>
+                                <div class="topOfMoved" >                        
+                                    <div class="pointByPoint">
+                                        <div class="point">
+                                            <p>De:</p>
+                                            <select id="selectPointOne">
+                                                <option value="" disabled selected></option>
+                                                <option value="belloS">Bello</option>
+                                                <option value="belenS">Belen</option>
+                                                <option value="itaguiS">Itagui</option>
+                                                <option value="guayabalS">Guayabal</option>
+                                                <option value="huecoS">Hueco</option>
+                                                <option value="plantaS">Planta</option>
+                                            </select>
+                                        </div>                                    
+                                        <div class="point">
+                                            <p>A:</p>
+                                            <select id="selectPointTwo">
+                                                <option value="" disabled selected></option>
+                                                <option value="belloE">Bello</option>
+                                                <option value="belenE">Belen</option>
+                                                <option value="itaguiE">Itagui</option>
+                                                <option value="guayabalE">Guayabal</option>
+                                                <option value="huecoE">Hueco</option>
+                                                <option value="plantaE">Planta</option>
+                                            </select>
+                                        </div>       
+                                    </div>
+                                    <div class="containerPrintMoved">
+                                        <p>Imprimir traslado</p>
+                                        <input class="inputTXPrintT" type="text">
+                                        <input class="inputBNPrintT" type="button" value="">
+                                    </div>
+                                </div>  
+                                <div class="bottomOfMoved"> <!--parte (bottom) de traslados-->
+                                    <div class="nameListMoved">
                                         <div class="nameID">ID</div>
                                         <div class="nameReference" >Referencia</div>
                                         <div class="nameStore" >Bodega</div>
                                         <div class="nameAmount" >Cantidad</div>
                                     </div>
-                                    <div class="centerListInventory">
-                                        <input  type="text" class="invID noSelect" readonly>
-                                        <input  type="text" class="invreference noSelect"  readonly>
-                                        <input  type="text" value="Bello" class="invstore noSelect"  readonly>
-                                        <input  type="text" class="invamount noSelect"  readonly>
+                                    <div class="centerListMoved">
+                                        <input  type="text" class="movID" >
+                                        <input  type="text" class="movreference noSelect"  readonly>
+                                        <input  type="text" class="movstore noSelect"  readonly>
+                                        <input  type="text" class="movamount noSelect"  readonly>
                                     </div>
-                                    <div class="centerListInventory2">
-                                        <input  type="text" class="invID noSelect" readonly>
-                                        <input  type="text" class="invreference noSelect"  readonly>
-                                        <input  type="text" value="Guayabal" class="invstore noSelect"  readonly>
-                                        <input  type="text" class="invamount noSelect"  readonly>
+                                    <div class="centerListMoved2">
+                                        <input  type="text" class="movID" >
+                                        <input  type="text" class="movreference noSelect"  readonly>
+                                        <input  type="text" class="movstore noSelect"  readonly>
+                                        <input  type="text" class="movamount noSelect"  readonly>
                                     </div>
-                                    <div class="centerListInventory">
-                                        <input  type="text" class="invID noSelect" readonly>
-                                        <input  type="text" class="invreference noSelect"  readonly>
-                                        <input  type="text" value="Hueco" class="invstore noSelect"  readonly>
-                                        <input  type="text" class="invamount noSelect"  readonly>
+                                    <div class="centerListMoved">
+                                        <input  type="text" class="movID" >
+                                        <input  type="text" class="movreference noSelect"  readonly>
+                                        <input  type="text" class="movstore noSelect"  readonly>
+                                        <input  type="text" class="movamount noSelect"  readonly>
                                     </div>
-                                    <div class="centerListInventory2">
-                                        <input  type="text" class="invID noSelect" readonly>
-                                        <input  type="text" class="invreference noSelect"  readonly>
-                                        <input  type="text" value="Belen" class="invstore noSelect"  readonly>
-                                        <input  type="text" class="invamount noSelect"  readonly>
+                                    <div class="centerListMoved2">
+                                        <input  type="text" class="movID" >
+                                        <input  type="text" class="movreference noSelect"  readonly>
+                                        <input  type="text" class="movstore noSelect"  readonly>
+                                        <input  type="text" class="movamount noSelect"  readonly>
                                     </div>
-                                    <div class="centerListInventory">
-                                        <input  type="text" class="invID noSelect" readonly>
-                                        <input  type="text" class="invreference noSelect"  readonly>
-                                        <input  type="text" value="Itagui" class="invstore noSelect"  readonly>
-                                        <input  type="text" class="invamount noSelect"  readonly>
+                                    <div class="centerListMoved">
+                                        <input  type="text" class="movID" >
+                                        <input  type="text" class="movreference noSelect"  readonly>
+                                        <input  type="text" class="movstore noSelect"  readonly>
+                                        <input  type="text" class="movamount noSelect"  readonly>
                                     </div>
-                                    <div class="centerListInventory2">
-                                        <input  type="text" class="invID noSelect" readonly>
-                                        <input  type="text" class="invreference noSelect"  readonly>
-                                        <input  type="text" value="Bodega planta" class="invstore noSelect"  readonly>
-                                        <input  type="text" class="invamount noSelect"  readonly>
+                                    <div class="centerListMoved2">
+                                        <input  type="text" class="movID" >
+                                        <input  type="text" class="movreference noSelect"  readonly>
+                                        <input  type="text" class="movstore noSelect"  readonly>
+                                        <input  type="text" class="movamount noSelect"  readonly>
                                     </div>
-                                    <div class="centerListInventory">
-                                        <input  type="text" class="invID noSelect" readonly>
-                                        <input  type="text" class="invreference noSelect"  readonly>
-                                        <input  type="text" value="Total" class="invstore noSelect"  readonly>
-                                        <input  type="text" class="invamount noSelect"  readonly>
+                                    <div class="centerListMoved">
+                                        <input  type="text" class="movID" >
+                                        <input  type="text" class="movreference noSelect"  readonly>
+                                        <input  type="text" class="movstore noSelect"  readonly>
+                                        <input  type="text" class="movamount noSelect"  readonly>
                                     </div>
-                                    <div class="centerListInventory2">
-                                        <input  type="text" class="invID noSelect" readonly>
-                                        <input  type="text" class="invreference noSelect"  readonly>
-                                        <input  type="text" value="" class="invstore noSelect"  readonly>
-                                        <input  type="text" class="invamount noSelect"  readonly>
+                                    <div class="centerListMoved2">
+                                        <input  type="text" class="movID" >
+                                        <input  type="text" class="movreference noSelect"  readonly>
+                                        <input  type="text" class="movstore noSelect"  readonly>
+                                        <input  type="text" class="movamount noSelect"  readonly>
                                     </div>
-                                    <div class="centerListInventory">
-                                        <input  type="text" class="invID noSelect"  readonly>
-                                        <input  type="text" class="invreference noSelect"   readonly>
-                                        <input  type="text" value="" class="invstore noSelect"   readonly>
-                                        <input  type="text" class="invamount noSelect"  readonly>
+                                    <div class="centerListMoved">
+                                        <input  type="text" class="movID" >
+                                        <input  type="text" class="movreference noSelect"  readonly>
+                                        <input  type="text" class="movstore noSelect"  readonly>
+                                        <input  type="text" class="movamount noSelect"  readonly>
                                     </div>
                                 </div>
-                            </div>
+                                <input class="finalButtonMoved" type="button" value="Trasladar">             
+                            </div>                        
                         </div>
-                    <!--Inventario-->
-
-                    <!--Boton circulo-->
-                        <div class="usefulCircleButton"> 
-                            <div id="buttonUsefulCircle"> 
-                                <img id="arrowCircle" class="arrowCircle" src="./images/flecha curva.png">
-                                <p id="textCircle" class="textCircle">Pasar referencia</p>
-                                <img id="arrowCircle2" class="arrowCircle2" src="./images/flecha curva.png">
-                            </div>
-                        </div>
-                    <!--Boton circulo-->
-
-                    <!--Traslados--> 
-                    <div class="movedContainer" >
-                        <div class="maginSpace">
-                            <p class="nameMoved">Traslados</p>
-                            <div class="topOfMoved" >                        
-                                <div class="pointByPoint">
-                                    <div class="point">
-                                        <p>De:</p>
-                                        <select id="selectPointOne">
-                                            <option value="" disabled selected></option>
-                                            <option value="belloS">Bello</option>
-                                            <option value="belenS">Belen</option>
-                                            <option value="itaguiS">Itagui</option>
-                                            <option value="guayabalS">Guayabal</option>
-                                            <option value="huecoS">Hueco</option>
-                                            <option value="plantaS">Planta</option>
-                                        </select>
-                                    </div>                                    
-                                    <div class="point">
-                                        <p>A:</p>
-                                        <select id="selectPointTwo">
-                                            <option value="" disabled selected></option>
-                                            <option value="belloE">Bello</option>
-                                            <option value="belenE">Belen</option>
-                                            <option value="itaguiE">Itagui</option>
-                                            <option value="guayabalE">Guayabal</option>
-                                            <option value="huecoE">Hueco</option>
-                                            <option value="plantaE">Planta</option>
-                                        </select>
-                                    </div>       
-                                </div>
-                                <div class="containerPrintMoved">
-                                    <p>Imprimir traslado</p>
-                                    <input class="inputTXPrintT" type="text">
-                                    <input class="inputBNPrintT" type="button" value="">
-                                </div>
-                            </div>  
-                            <div class="bottomOfMoved"> <!--parte (bottom) de traslados-->
-                                <div class="nameListMoved">
-                                    <div class="nameID">ID</div>
-                                    <div class="nameReference" >Referencia</div>
-                                    <div class="nameStore" >Bodega</div>
-                                    <div class="nameAmount" >Cantidad</div>
-                                </div>
-                                <div class="centerListMoved">
-                                    <input  type="text" class="movID" >
-                                    <input  type="text" class="movreference noSelect"  readonly>
-                                    <input  type="text" class="movstore noSelect"  readonly>
-                                    <input  type="text" class="movamount noSelect"  readonly>
-                                </div>
-                                <div class="centerListMoved2">
-                                    <input  type="text" class="movID" >
-                                    <input  type="text" class="movreference noSelect"  readonly>
-                                    <input  type="text" class="movstore noSelect"  readonly>
-                                    <input  type="text" class="movamount noSelect"  readonly>
-                                </div>
-                                <div class="centerListMoved">
-                                    <input  type="text" class="movID" >
-                                    <input  type="text" class="movreference noSelect"  readonly>
-                                    <input  type="text" class="movstore noSelect"  readonly>
-                                    <input  type="text" class="movamount noSelect"  readonly>
-                                </div>
-                                <div class="centerListMoved2">
-                                    <input  type="text" class="movID" >
-                                    <input  type="text" class="movreference noSelect"  readonly>
-                                    <input  type="text" class="movstore noSelect"  readonly>
-                                    <input  type="text" class="movamount noSelect"  readonly>
-                                </div>
-                                <div class="centerListMoved">
-                                    <input  type="text" class="movID" >
-                                    <input  type="text" class="movreference noSelect"  readonly>
-                                    <input  type="text" class="movstore noSelect"  readonly>
-                                    <input  type="text" class="movamount noSelect"  readonly>
-                                </div>
-                                <div class="centerListMoved2">
-                                    <input  type="text" class="movID" >
-                                    <input  type="text" class="movreference noSelect"  readonly>
-                                    <input  type="text" class="movstore noSelect"  readonly>
-                                    <input  type="text" class="movamount noSelect"  readonly>
-                                </div>
-                                <div class="centerListMoved">
-                                    <input  type="text" class="movID" >
-                                    <input  type="text" class="movreference noSelect"  readonly>
-                                    <input  type="text" class="movstore noSelect"  readonly>
-                                    <input  type="text" class="movamount noSelect"  readonly>
-                                </div>
-                                <div class="centerListMoved2">
-                                    <input  type="text" class="movID" >
-                                    <input  type="text" class="movreference noSelect"  readonly>
-                                    <input  type="text" class="movstore noSelect"  readonly>
-                                    <input  type="text" class="movamount noSelect"  readonly>
-                                </div>
-                                <div class="centerListMoved">
-                                    <input  type="text" class="movID" >
-                                    <input  type="text" class="movreference noSelect"  readonly>
-                                    <input  type="text" class="movstore noSelect"  readonly>
-                                    <input  type="text" class="movamount noSelect"  readonly>
-                                </div>
-                            </div>
-                            <input class="finalButtonMoved" type="button" value="Trasladar">             
-                        </div>                        
+                        <!--Traslados--> 
                     </div>
-                    <!--Traslados--> 
+                    <!--Historial de ulitidades-->
+                    <div></div>
+                        <div class="containerRecordUtiliesStyle" id="containerRecordUtiliesLogic">
+                            <div class="recordInventory"> <!--Historial del inventario-->
+                                <p class="textRecInv" >Historial Inventario</p>
+                            </div>
+                            <div class="recordMoved"> <!--Historial de traslados-->
+                                <p class="textRecMov" >Historial Traslados</p>
+                            </div>
+                        </div>
+                    <!--Historial de ulitidades-->
 
-                </div>  
+                </div>
             <!-- Utilidades -->
 
         </main> <!-- Centro -->
         <footer id="footer">
             <div class="contentFooter">
-                <p>Version 1.1.4</p>
+                <p>Version 1.1.5</p>
             </div>
         </footer>
     </div>
