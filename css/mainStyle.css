@@ -1215,6 +1215,18 @@ html,body{
                     height: 3em;
                     margin: 1em 0 0 2em;
                 }
+            /*Estilos de la interfaz final de traslados*/
+                .InterfaceFinalMovedStyle{
+                    display: flex;
+                    position: absolute;
+                    top:50%;
+                    left:50%;
+                    transform: translate(-50%,-50%);
+                    height: 10em;
+                    width: 5em;
+                    background-color: #e42820;
+                    border: #9c1c18 1px solid;
+                }
 
         /*Estilos de historial de utilidades*/
             .containerRecordUtiliesStyle{
@@ -1225,10 +1237,13 @@ html,body{
             }
             /*Estilos del historial de inventario*/
                 .recordInventory{
+                    display: flex;
+                    flex-direction: column;
                     background-color: #e42820;
                     margin-top: 1%;
                     width: 48%;
-                    border-radius: 0 20px 0 20px;  
+                    border-radius: 0 20px 0 20px;
+                    overflow: hidden;  
                 }
                     .textRecInv{
                         margin: 5px 0 0 10px;
@@ -1236,19 +1251,130 @@ html,body{
                         font-size: 1.5em;
                                               
                     }
+                    .subRecInv{
+                        display: flex;
+                        flex-grow: 1;
+                        width: 100%;
+
+                    }
+                        .listRecInvStyleP{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: calc(100% - 2px);
+                            width: 15%;
+                            margin: 0;
+                            border-top: 2px white solid;
+                            
+                            &:hover{
+                                cursor:pointer;
+                                background-color: #9c1c18;
+                            }
+                        }
+                        .listRecInvStyle{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: calc(100% - 2px);
+                            width: 15%;
+                            margin: 0 1.25%;
+                            border-top: 2px white solid;
+                            
+                            &:hover{
+                                cursor:pointer;
+                                background-color: #9c1c18;
+                            }
+                        }
+
+                        .listRecInvStyleF{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: calc(100% - 2px);
+                            width: 15%;
+                            margin: 0;
+                            border-top: 2px white solid;
+                            
+                            &:hover{
+                                cursor:pointer;
+                                background-color: #9c1c18;
+                            }
+                        }
+                        .subRecInv p{
+                            color: white;
+                            margin: 0;
+                            text-align: center;
+                        }
             /*Estilos del historial de traslados*/
                 .recordMoved{
+                    display: flex;
+                    flex-direction: column;
                     background-color: #e42820;
                     margin-top: 1%;                    
                     width: 48%;
                     border-radius: 20px 0 20px 0;
+                    overflow: hidden;
                 }
                     .textRecMov{
                         margin: 5px 0 0 10px;
                         color: white;
                         font-size: 1.5em;
-                                            
+                       
                     }
+                    .subRecMov{
+                        display: flex;
+                        flex-grow: 1;
+                        width: 100%;
+
+                    }
+                        .listRecMovStyleP{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: calc(100% - 2px);
+                            width: 15%;
+                            margin: 0;
+                            border-top: 2px white solid;
+                            
+                            &:hover{
+                                cursor:pointer;
+                                background-color: #9c1c18;
+                            }
+                        }
+                        .listRecMovStyle{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: calc(100% - 2px);
+                            width: 15%;
+                            margin: 0 1.25%;
+                            border-top: 2px white solid;
+                            
+                            &:hover{
+                                cursor:pointer;
+                                background-color: #9c1c18;
+                            }
+                        }
+
+                        .listRecMovStyleF{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: calc(100% - 2px);
+                            width: 15%;
+                            margin: 0;
+                            border-top: 2px white solid;
+                            
+                            &:hover{
+                                cursor:pointer;
+                                background-color: #9c1c18;
+                            }
+                        }
+                        .subRecMov p{
+                            color: white;
+                            margin: 0;
+                            text-align: center;
+                        }
             
 /* MAIN */
 
