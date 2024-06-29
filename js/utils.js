@@ -12,9 +12,6 @@ export function openScreenSecond(){ // <---------- Abre la segunda y la tercera 
     document.getElementById('record').style.opacity = '1'
 }
 
-export function closeScreenInv(){ // <---------- Cierra pantallas inventario 
-    
-}
 
 
 

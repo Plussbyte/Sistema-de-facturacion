@@ -1211,21 +1211,21 @@ html,body{
                     grid-template-columns: 18% 50% 20% 12%;
                 }
             /*Estilo boton final de traslados*/
-                .finalButtonMoved{
+                .finalButtonMovedStyle{
                     height: 3em;
                     margin: 1em 0 0 2em;
                 }
 
             /*Estilos de la interfaz final de traslados*/
                 .InterfaceFinalMovedStyle{
-                    display: flex;
+                    display: none;
                     position: absolute;
                     flex-direction:column;
                     align-items: center;
                     top:50%;
                     left:50%;
                     transform: translate(-50%,-50%);
-                    height: 15em;
+                    height: 16em;
                     width: 32em;
                     background-color: #e42820;
                     border: #9c1c18 1px solid;
@@ -1238,7 +1238,10 @@ html,body{
 
                     .observationsIntFinStyle{
                         height:8em;
-                        width:35em;
+                        width:30em;
+                        padding: 5px;
+                        font-size: 1.2em;
+                        resize: none;
                     }
 
                     .containerButtonsIntFinStyle{

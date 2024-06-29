@@ -1,6 +1,6 @@
-import { closeScreenSecond } from './utils.js' // <---------- Cierra la segunda y la tercera pantalla
-import { openScreenSecond} from './utils.js' // <---------- Abre la segunda y la tercera pantalla
-
+import { closeScreenSecond } from './utils.js' // <---- Cierra la segunda y la tercera pantalla
+import { openScreenSecond} from './utils.js' // <---- Abre la segunda y la tercera pantalla
+const screenLoaderMain = document.getElementById('loadingScreenBill') // <---- Constante que contiene la pantalla de carga
 //Facuracion
     export function finalUser(){ //<----------- Boton de usuario final 
         document.getElementById('finalUser').addEventListener('click',()=>{
@@ -417,6 +417,29 @@ import { openScreenSecond} from './utils.js' // <---------- Abre la segunda y la
                 document.getElementById('arrowCircle').src = './images/flecha curva.png'
                 document.getElementById('arrowCircle2').src = './images/flecha curva.png'
             })
+
+        function activeButtonFinalMoved(){ // <---- Funcion que encierra la logica del boton final de los traslados 
+            const buttonFinalMoved = document.getElementById('finalButtonMovedLogic')
+            buttonFinalMoved.addEventListener('click',()=>{
+                document.getElementById('InterfaceFinalMovedLogic').style.display = 'flex'
+            })
+
+            const buttonCancelFinMov = document.getElementById('cancelIntFinLogic')
+            buttonCancelFinMov.addEventListener('click',()=>{
+                document.getElementById('InterfaceFinalMovedLogic').style.display = 'none'
+            })
+
+            const buttonAcceptFinMov = document.getElementById('acceptIntFinLogic')
+            buttonAcceptFinMov.addEventListener('click',()=>{
+                document.getElementById('InterfaceFinalMovedLogic').style.display = 'none'
+                screenLoaderMain.style.display = 'flex'
+                setTimeout(()=>{
+                    screenLoaderMain.style.display = 'none'  
+                },2000)
+            })
+        }
+
+        activeButtonFinalMoved()
  
     }
 
