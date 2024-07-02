@@ -433,8 +433,13 @@ const screenLoaderMain = document.getElementById('loadingScreenBill') // <---- C
             buttonAcceptFinMov.addEventListener('click',()=>{
                 document.getElementById('InterfaceFinalMovedLogic').style.display = 'none'
                 screenLoaderMain.style.display = 'flex'
+                document.getElementById('all').style.opacity = '.5'
+                document.getElementById('all').style.pointerEvents = 'none'
+                document.getElementById('observationsIntFinLogic').value = ''
                 setTimeout(()=>{
-                    screenLoaderMain.style.display = 'none'  
+                    screenLoaderMain.style.display = 'none'
+                    document.getElementById('all').style.opacity = '1'
+                    document.getElementById('all').style.pointerEvents = 'auto'   
                 },2000)
             })
         }
